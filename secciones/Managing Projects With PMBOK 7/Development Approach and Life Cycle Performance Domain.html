@@ -1,0 +1,281 @@
+<!-- ====================================================== -->
+<!-- CHAPTER 4 — DEVELOPMENT APPROACH & LIFE CYCLE DOMAIN  -->
+<!-- ====================================================== -->
+
+<section id="life-cycle-domain">
+  <p class="section-text">
+    El <strong>Development Approach and Life Cycle Performance Domain</strong> define cómo
+    avanza un proyecto desde su concepción hasta su cierre. Esto incluye las fases del ciclo de vida,
+    cómo se gestiona cada una, y cómo se integra el trabajo mediante enfoques predictivos,
+    incrementales, iterativos o híbridos.
+  </p>
+
+  <div class="practical-insight">
+    <h4>Insight clave</h4>
+    <p>
+      Cada fase del proyecto contiene su propio ciclo interno (“build, test, deploy, close”).
+      No existe una fase que no requiera ejecución disciplinada. La vida del proyecto es una estructura
+      fractal donde cada etapa tiene su propio mini-proyecto.
+    </p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 1. PROJECT LIFE CYCLE                                  -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">El ciclo de vida del proyecto</h1>
+</section>
+
+<section class="card">
+  <h2 class="section-subtitle">Fases del ciclo de vida</h2>
+  <p class="section-text">
+    Todo proyecto avanza a través de un conjunto de fases que estructuran su evolución.
+    El ciclo típico incluye:
+  </p>
+
+  <ul class="section-list">
+    <li><strong>Concept</strong>: origen de la idea, drivers estratégicos, necesidad del negocio.</li>
+    <li><strong>Feasibility</strong>: definición preliminar del alcance, viabilidad técnica y económica.</li>
+    <li><strong>Plan</strong>: planificación integrada (alcance, cronograma, costo, riesgos, recursos).</li>
+    <li><strong>Develop</strong>: ejecución, integración, validación y despliegue del producto.</li>
+    <li><strong>Close</strong>: handover, documentación, transición operativa, lecciones aprendidas.</li>
+  </ul>
+
+  <div class="diagram-layout">
+    <div class="diagram-left">
+      <img
+        src="assets/Project with PMBOK/Development Approach and the Life Cycle Performance Domain/Figure 4.1 Managing the life cycle using phases.png"
+        alt="Figura 4.1 – Managing the life cycle using phases"
+        class="diagram-image"
+      >
+    </div>
+
+    <div class="diagram-right">
+      <h4>Interpretación operativa</h4>
+      <p class="section-text">
+        La figura muestra cómo Concept → Feasibility → Plan → Develop no solo son bloques
+        aislados, sino fases que contienen internamente un ciclo completo de:
+        <strong>Feasibility, Design, Build, Test, Deploy, Close</strong>.
+      </p>
+
+      <div class="practical-insight">
+        <h4>Regla crítica</h4>
+        <p>
+          Cada fase es un mini-proyecto. Cada fase requiere planificación, ejecución,
+          integración y cierre. Un PM que trata las fases solo como “documentos” está
+          gestionando mal el ciclo de vida.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 2. DEVELOPMENT APPROACH                                -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Development Approach</h1>
+</section>
+
+<section class="card">
+  <h2 class="section-subtitle">Enfoques de desarrollo</h2>
+  <p class="section-text">
+    El <strong>Development Approach</strong> determina cómo se ejecutará cada fase del ciclo de vida.
+    No todos los proyectos requieren un enfoque predictivo. No todos admiten agilidad.
+    El PM debe seleccionar el enfoque más adecuado según incertidumbre, complejidad,
+    repetitividad del trabajo y velocidad requerida.
+  </p>
+
+  <div class="cv-two-cols">
+    <div class="cv-col">
+      <h3 class="section-subtitle">Predictivo</h3>
+      <ul class="section-list">
+        <li>El alcance es claro desde el inicio.</li>
+        <li>La secuencia Design → Build → Test es estable.</li>
+        <li>Ideal para construcción, ingeniería, manufactura tradicional.</li>
+      </ul>
+    </div>
+
+    <div class="cv-col">
+      <h3 class="section-subtitle">Iterativo / Adaptativo</h3>
+      <ul class="section-list">
+        <li>El alcance se descubre progresivamente.</li>
+        <li>Se buscan ciclos rápidos de aprendizaje.</li>
+        <li>Útil para innovación, TI, desarrollo de productos nuevos.</li>
+      </ul>
+    </div>
+
+    <div class="cv-col">
+      <h3 class="section-subtitle">Incremental</h3>
+      <ul class="section-list">
+        <li>Se entrega valor por partes (increments).</li>
+        <li>Cada incremento debe integrarse al todo.</li>
+        <li>Excelente para productos complejos que requieren validación temprana.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="practical-insight">
+    <h4>Insight clave del capítulo</h4>
+    <p>
+      El enfoque incremental se fundamenta en la <strong>integración continua</strong>.
+      Cada incremento obliga a consolidar decisiones, arquitectura, procesos y calidad.
+      Esto evita grandes sorpresas en fases tardías.
+    </p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 3. PROJECT CHARTER COMO MECANISMO DE INTEGRACIÓN       -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h2 class="section-subtitle">El Project Charter y su rol en el ciclo de vida</h2>
+  <p class="section-text">
+    El Charter es la <strong>autorización formal</strong> que permite al proyecto operar fuera del
+    sistema normal de la organización. Según el capítulo, el Charter es el primer mecanismo
+    de integración porque establece:
+  </p>
+
+  <ul class="section-list">
+    <li>Propósito y drivers estratégicos.</li>
+    <li>Alcance preliminar y restricciones.</li>
+    <li>Autoridad del PM para usar recursos.</li>
+    <li>Visión inicial del producto o servicio.</li>
+  </ul>
+
+  <div class="practical-insight">
+    <h4>Aplicación práctica</h4>
+    <p>
+      Si el alcance no está claro (ej. desarrollo de producto), el Charter documenta incertidumbre.
+      Si el alcance está fijado (ej. contrato EPC), el Charter define entregables obligatorios.
+    </p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 4. LAYERS: DOMAINS POR DEBAJO DEL CICLO DE VIDA        -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h2 class="section-subtitle">Los Performance Domains como capa inferior</h2>
+  <p class="section-text">
+    El capítulo distingue dos niveles: el <strong>life cycle</strong> (arriba) y los
+    <strong>performance domains</strong> (abajo). Los dominios no reemplazan el ciclo de vida;
+    lo soportan en cada fase.
+  </p>
+
+  <ul class="section-list">
+    <li>Stakeholders → deben gestionarse en todas las fases.</li>
+    <li>Team → cambia su dinámica fase por fase.</li>
+    <li>Planning → se ajusta conforme evoluciona el ciclo.</li>
+    <li>Project Work → ejecuta dentro de cada fase.</li>
+    <li>Measurement → controla cada fase.</li>
+    <li>Uncertainty → vive en todas las fases, pero cambia su naturaleza.</li>
+  </ul>
+
+  <div class="practical-insight">
+    <h4>Idea crítica</h4>
+    <p>
+      No existe un ciclo de vida que funcione sin domains sólidos.
+      Los domains son la ingeniería del proyecto; el life cycle es su arquitectura.
+    </p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 5. LIFE CYCLE COMO HERRAMIENTA DE GOBERNANZA           -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">El ciclo de vida como gobernanza</h1>
+</section>
+
+<section class="card">
+  <p class="section-text">
+    Definir Concept → Feasibility → Plan → Develop → Close no es solo hacer un diagrama.
+    Es establecer cómo se tomarán decisiones, qué puertas de control existen (gates),
+    cuándo se asignarán recursos, y cómo se reducirá la incertidumbre.
+  </p>
+
+  <h3 class="section-subtitle">Preguntas que debe responder tu Life Cycle:</h3>
+  <ul class="section-list">
+    <li>¿Dónde se valida que el proyecto sigue siendo viable?</li>
+    <li>¿Qué entregables produce cada fase?</li>
+    <li>¿Quién aprueba el avance de fase?</li>
+    <li>¿Qué criterios determinan el paso a la siguiente fase?</li>
+    <li>¿Qué enfoques de desarrollo se aplican en cada fase?</li>
+  </ul>
+</section>
+
+<!-- ====================================================== -->
+<!-- 6. CHECKLIST – LIFE CYCLE DOMAIN                       -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Checklist – Development Approach & Life Cycle</h1>
+</section>
+
+<section class="card">
+  <p class="section-text">
+    Antes de cerrar el dominio, asegura que tu proyecto cumpla con lo siguiente:
+  </p>
+
+  <div class="cv-two-cols">
+    <div class="cv-col">
+      <h3 class="section-subtitle">Ciclo de vida</h3>
+      <ul class="section-list">
+        <li>Fases definidas (Concept, Feasibility, Plan, Develop, Close).</li>
+        <li>Entregables de cada fase identificados.</li>
+        <li>Criterios de transición entre fases establecidos.</li>
+        <li>Stakeholders responsables de aprobar cada fase identificados.</li>
+      </ul>
+    </div>
+
+    <div class="cv-col">
+      <h3 class="section-subtitle">Development Approach</h3>
+      <ul class="section-list">
+        <li>Enfoque predictivo, incremental, iterativo o híbrido seleccionado y justificado.</li>
+        <li>Estrategia de integración clara para increments y prototipos.</li>
+        <li>Revisión periódica del enfoque según evolución del proyecto.</li>
+      </ul>
+    </div>
+
+    <div class="cv-col">
+      <h3 class="section-subtitle">Integración y gobernanza</h3>
+      <ul class="section-list">
+        <li>Charter aprobado y documentado.</li>
+        <li>Relación entre domains y life cycle documentada.</li>
+        <li>Puertas de control (gates) definidas y comunicadas.</li>
+        <li>Proceso de escalamiento establecido por fase.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="checklist-table-wrapper">
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th style="width:40px;">No.</th>
+          <th>Item</th>
+          <th style="width:80px;">Status</th>
+          <th style="width:80px;">Date</th>
+          <th style="width:80px;">Initials</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Fases del ciclo de vida definidas y aprobadas</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Development approach documentado y alineado con el proyecto</td><td></td><td></td><td></td></tr>
+        <tr><td>3</td><td>Gates y criterios de transición establecidos</td><td></td><td></td><td></td></tr>
+        <tr><td>4</td><td>Charter aprobado por sponsor</td><td></td><td></td><td></td></tr>
+        <tr><td>5</td><td>Integración clara entre domains y life cycle</td><td></td><td></td><td></td></tr>
+        <tr><td>6</td><td>Planes de gestión por dominio actualizados según la fase</td><td></td><td></td><td></td></tr>
+        <tr><td>7</td><td>Enfoque incremental validado para integraciones críticas</td><td></td><td></td><td></td></tr>
+        <tr><td>8</td><td>Lecciones aprendidas capturadas en cada fase</td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>

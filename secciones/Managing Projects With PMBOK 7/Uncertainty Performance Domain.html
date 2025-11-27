@@ -1,0 +1,262 @@
+<!-- ====================================================== -->
+<!-- CHAPTER 9 — UNCERTAINTY PERFORMANCE DOMAIN            -->
+<!-- ====================================================== -->
+
+<section id="uncertainty-domain">
+  <p class="section-text">
+    La incertidumbre es todo aquello que puede impedir el éxito del proyecto. Los riesgos son eventos que aún no han ocurrido, pero que podrían ocurrir. Una vez ocurren, dejan de ser riesgos: se vuelven issues. La gestión de riesgos es el mecanismo mediante el cual el PM protege el proyecto.
+  </p>
+
+  <div class="practical-insight">
+    <h4>Idea central</h4>
+    <p>
+      El PM es, en esencia, un gestor de riesgos. Cada decisión busca reducir la probabilidad o el impacto de aquello que podría impedir el logro del objetivo.
+    </p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 1. RISK BREAKDOWN STRUCTURE                            -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Risk Breakdown Structure (RBS)</h1>
+</section>
+
+<section class="card">
+  <p class="section-text">
+    El RBS organiza las fuentes de riesgo en categorías típicas. Es un detonador para el proceso de identificación.
+  </p>
+
+  <div class="diagram-center">
+    <img
+      src="assets/Project with PMBOK/Uncertainty Performance Domain/Figure 9.1 The risk breakdown structure.png"
+      alt="Figure 9.1 Risk Breakdown Structure"
+      class="diagram-image"
+    >
+  </div>
+
+  <ul class="section-list">
+    <li><strong>Técnicos</strong>: scope, requerimientos, procesos, tecnología.</li>
+    <li><strong>De gestión</strong>: recursos, comunicación.</li>
+    <li><strong>Comerciales</strong>: contratos, proveedores, cliente.</li>
+    <li><strong>Externos</strong>: competencia, regulatorio, instalaciones.</li>
+  </ul>
+</section>
+
+<!-- ====================================================== -->
+<!-- 2. RISK REGISTER                                        -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Risk Register</h1>
+</section>
+
+<section class="card">
+  <p class="section-text">
+    Los riesgos identificados se cuantifican mediante la severidad: probabilidad × impacto.
+  </p>
+
+  <div class="diagram-center">
+    <img
+      src="assets/Project with PMBOK/Uncertainty Performance Domain/Figure 9.2 The risk register.png"
+      alt="Figure 9.2 Risk Register"
+      class="diagram-image"
+    >
+  </div>
+
+  <p class="section-text">
+    El registro se revisa semanalmente. Solo se priorizan los riesgos con mayor severidad.
+  </p>
+
+  <table class="risk-table">
+    <thead>
+      <tr>
+        <th>Risk ID</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Assigned To</th>
+        <th>Strategy</th>
+        <th>Probability</th>
+        <th>Impact</th>
+        <th>Ranking</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>4252018</td><td>Supplier delay</td><td>1/25/2018</td><td>Jan</td><td>Avoid</td><td>0.25</td><td>$17,500</td><td>$4,375</td></tr>
+      <tr><td>2182018</td><td>Contract delay</td><td>1/18/2018</td><td>Jaclyn</td><td>Mitigate</td><td>0.20</td><td>$15,000</td><td>$3,000</td></tr>
+      <tr><td>3202018</td><td>Design flaw</td><td>1/20/2018</td><td>Jamie</td><td>Mitigate</td><td>0.10</td><td>$10,000</td><td>$1,000</td></tr>
+      <tr><td>1152018</td><td>Server failure</td><td>1/15/2018</td><td>Levi</td><td>Transfer</td><td>0.01</td><td>$10,000</td><td>$100</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ====================================================== -->
+<!-- 3. PROBABILITY–IMPACT MATRIX                           -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Probability–Impact Matrix</h1>
+</section>
+
+<section class="card">
+  <p class="section-text">
+    Herramienta visual para resaltar los riesgos más críticos. Su propósito: visibilidad inmediata.
+  </p>
+
+  <div class="diagram-center">
+    <img
+      src="assets/Project with PMBOK/Uncertainty Performance Domain/Figure 9.3 The probability-impact matrix.png"
+      alt="Figure 9.3 Probability-Impact Matrix"
+      class="diagram-image"
+    >
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 4. MONTE CARLO ANALYSIS                                -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Monte Carlo Simulation</h1>
+</section>
+
+<section class="card">
+  <p class="section-text">
+    Simula miles de escenarios usando valores aleatorios dentro de rangos definidos (three-point estimates). El resultado: una distribución probabilística de duración o costo.
+  </p>
+
+  <div class="diagram-center">
+    <img
+      src="assets/Project with PMBOK/Uncertainty Performance Domain/Figure 9.5 Monte Carlo analysis.png"
+      alt="Figure 9.5 Monte Carlo Simulation"
+      class="diagram-image"
+    >
+  </div>
+
+  <div class="practical-insight">
+    <h4>Interpretación operativa</h4>
+    <p>
+      No predice un único valor. Predice la probabilidad de diferentes escenarios. Su utilidad se encuentra en definir buffers, reservas de contingencia y evaluar realismo del plan.
+    </p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 5. BAYES THEOREM IN PROJECT RISK                       -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Bayesian Updating</h1>
+</section>
+
+<section class="card">
+  <p class="section-text">
+    Bayes permite actualizar la probabilidad de estar “on-time” cuando aparece nueva evidencia. Es un enfoque superior al análisis meramente frecuentista cuando el proyecto es único (one-time event).
+  </p>
+
+  <div class="diagram-center">
+    <img
+      src="assets/Project with PMBOK/Uncertainty Performance Domain/Figure 9.8 Bayesian analysis shorthand method.png"
+      alt="Figure 9.8 Bayesian Analysis"
+      class="diagram-image"
+    >
+  </div>
+
+  <p class="section-text">
+    La conclusión del ejemplo es clara: un plan con “95% PERT” no implica un 95% real de éxito. El cálculo aplicado reduce la probabilidad a solo 39%.
+  </p>
+</section>
+
+<!-- ====================================================== -->
+<!-- 6. RISK RESPONSE STRATEGIES (MART)                     -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Risk Response Strategies</h1>
+</section>
+
+<section class="card">
+  <p class="section-text">
+    Resumidas con el acrónimo <strong>MART</strong>: Mitigate, Avoid, Retain, Transfer.
+  </p>
+
+  <div class="diagram-center">
+    <img
+      src="assets/Project with PMBOK/Uncertainty Performance Domain/Figure 9.9 Risk response strategies.png"
+      alt="Figure 9.9 Risk Response Strategies"
+      class="diagram-image"
+    >
+  </div>
+
+  <div class="cv-two-cols">
+    <div class="cv-col">
+      <h3>Mitigate</h3>
+      <p>Reducir probabilidad o impacto.</p>
+    </div>
+    <div class="cv-col">
+      <h3>Avoid</h3>
+      <p>Eliminar el riesgo cambiando el plan o el alcance.</p>
+    </div>
+    <div class="cv-col">
+      <h3>Retain</h3>
+      <p>Aceptar el riesgo y monitorearlo.</p>
+    </div>
+    <div class="cv-col">
+      <h3>Transfer</h3>
+      <p>Pasar responsabilidad a un tercero (contratos o seguros).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 7. UNCERTAINTY MANAGEMENT PLAN                         -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Uncertainty Management Elements</h1>
+</section>
+
+<section class="card">
+  <ul class="section-list">
+    <li><strong>Risk identification</strong>: técnicas, brainstorming, RBS.</li>
+    <li><strong>Assessment</strong>: probabilidad, impacto, severidad, matrices.</li>
+    <li><strong>Quantitative tools</strong>: PERT, Monte Carlo, Bayes.</li>
+    <li><strong>Roles</strong>: responsables del proceso de riesgo.</li>
+    <li><strong>Ranking & reporting</strong>: visibilidad continua y actualizada.</li>
+    <li><strong>Response planning</strong>: selección de estrategias MART.</li>
+  </ul>
+</section>
+
+<!-- ====================================================== -->
+<!-- 8. CHECKLIST – UNCERTAINTY DOMAIN                     -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Checklist – Uncertainty & Risk</h1>
+</section>
+
+<section class="card">
+  <table class="checklist-table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Item</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Initials</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>RBS creado y validado</td><td></td><td></td><td></td></tr>
+      <tr><td>2</td><td>Risk register completo con ranking</td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td>Matriz probabilidad–impacto actualizada</td><td></td><td></td><td></td></tr>
+      <tr><td>4</td><td>Análisis cuantitativo aplicado según necesidad</td><td></td><td></td><td></td></tr>
+      <tr><td>5</td><td>Estrategias MART asignadas a cada riesgo crítico</td><td></td><td></td><td></td></tr>
+      <tr><td>6</td><td roles>Responsables de riesgos definidos</td><td></td><td></td><td></td></tr>
+      <tr><td>7</td><td>Actualización periódica semanal del registro</td><td></td><td></td><td></td></tr>
+      <tr><td>8</td><td>Bayesian updating incluido en casos complejos</td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+</section>
+
