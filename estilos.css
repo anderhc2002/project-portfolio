@@ -1,0 +1,1992 @@
+/* -------------------------------------- */
+/* RESET Y VARIABLES MODERNAS             */
+/* -------------------------------------- */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #3b82f6;
+  --secondary: #64748b;
+  --accent: #f59e0b;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: var(--gray-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -------------------------------------- */
+/* LAYOUT ELEGANTE                        */
+/* -------------------------------------- */
+
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--light);
+}
+
+/* -------------------------------------- */
+/* SIDEBAR DE LUJO                        */
+/* -------------------------------------- */
+
+.sidebar-full {
+  width: 280px;
+  background: linear-gradient(165deg, var(--dark) 0%, #1e293b 100%);
+  color: var(--light);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+}
+
+.sidebar-full::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+}
+
+/* Avatar elegante */
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  margin: 0 auto 1rem auto;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+/* Header del sidebar */
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sidebar-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar-subtitle {
+  font-size: 0.75rem;
+  color: var(--primary-light);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-tagline {
+  font-size: 0.9rem;
+  color: var(--gray-400);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--primary);
+}
+
+/* Contacto elegante */
+.sidebar-contact {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.75rem;
+  opacity: 0.8;
+}
+
+.contact-item a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.contact-item a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Navegación premium */
+.nav {
+  margin-top: auto;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav li {
+  margin-bottom: 0.5rem;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.6rem;
+  border-radius: var(--radius);
+  color: var(--gray-300);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: var(--primary);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover {
+  background: rgba(37, 99, 235, 0.1);
+  color: white;
+  border-color: rgba(37, 99, 235, 0.3);
+  transform: translateX(5px);
+}
+
+.nav a:hover::before {
+  transform: scaleY(1);
+}
+
+/* -------------------------------------- */
+/* CONTENIDO PRINCIPAL PREMIUM            */
+/* -------------------------------------- */
+
+.main-content {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 0 2rem 3rem;   /* menos espacio a izquierda y derecha */
+  background: var(--light);
+  position: relative;
+}
+
+
+
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* -------------------------------------- */
+/* HERO SECTION MÁS COMPACTO              */
+/* -------------------------------------- */
+
+.hero-section {
+  text-align: center;
+  padding: 2rem 2rem; /* Reducido de 4rem 2rem */
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(245, 158, 11, 0.05) 100%);
+  border-radius: var(--radius-xl);
+  margin-bottom: 2rem; /* Reducido de 3rem */
+  position: relative;
+  overflow: hidden;
+  min-height: 100px; /* Altura más rectangular */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.hero-title {
+  font-size: 2.5rem; /* Reducido de 3.5rem */
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--gray-900) 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem; /* Reducido de 1.5rem */
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem; /* Reducido de 1.25rem */
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* -------------------------------------- */
+/* FEATURE GRID MODERNO                   */
+/* -------------------------------------- */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* -------------------------------------- */
+/* CARDS PREMIUM                          */
+/* -------------------------------------- */
+
+.card {
+  background: white;
+  padding: 2rem; /* Reducido de 2.5rem */
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem; /* Reducido de 2rem */
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.section-title {
+  font-size: 1.75rem; /* Reducido de 2rem */
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 0.75rem; /* Reducido de 1rem */
+  background: linear-gradient(135deg, var(--gray-900) 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1.25rem; /* Reducido de 1.5rem */
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 1rem; /* Reducido de 1.5rem */
+  position: relative;
+  padding-left: 1rem;
+}
+
+.section-subtitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  border-radius: 2px;
+}
+
+.section-text {
+  font-size: 1rem; /* Reducido de 1.1rem */
+  color: var(--gray-700);
+  line-height: 1.6; /* Reducido de 1.7 */
+  margin-bottom: 1rem; /* Reducido de 1.5rem */
+}
+
+.section-list {
+  margin: 1rem 0; /* Reducido de 1.5rem */
+  padding-left: 1.5rem;
+}
+
+.section-list li {
+  margin-bottom: 0.5rem; /* Reducido de 0.75rem */
+  color: var(--gray-700);
+  line-height: 1.5; /* Reducido de 1.6 */
+  position: relative;
+  padding-left: 1rem;
+}
+
+.section-list li::before {
+  content: '▸';
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: -1rem;
+}
+
+/* -------------------------------------- */
+/* BADGES Y TAGS ELEGANTES                */
+/* -------------------------------------- */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  vertical-align: middle;
+  box-shadow: var(--shadow-sm);
+}
+
+.tag-phase {
+  background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%);
+}
+
+/* -------------------------------------- */
+/* FOOTER ELEGANTE                        */
+/* -------------------------------------- */
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+/* -------------------------------------- */
+/* RESPONSIVE DESIGN                      */
+/* -------------------------------------- */
+
+@media (max-width: 1024px) {
+  .sidebar-full {
+    width: 272px;
+  }
+  
+  .main-content {
+    padding: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.25rem; /* Reducido de 3rem */
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .sidebar-full {
+    width: 100%;
+    height: auto;
+    padding: 2rem 1.5rem;
+  }
+  
+  .main-content {
+    height: auto;
+    padding: 2rem 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem; /* Reducido de 2.5rem */
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem; /* Reducido de 2rem */
+  }
+  
+  .section-title {
+    font-size: 1.25rem; /* Reducido de 1.75rem */
+  }
+  
+  .feature-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* -------------------------------------- */
+/* UTILIDADES ADICIONALES                 */
+/* -------------------------------------- */
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+/* Loading states */
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--gray-500);
+}
+
+.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+
+/* -------------------------------------- */
+/* ESTILOS PARA CONTACTOS MÁS PEQUEÑOS    */
+/* -------------------------------------- */
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-label {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    margin-bottom: 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-item a {
+    font-size: 0.8rem;
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 1.3;
+}
+
+.contact-item a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-contact {
+    background: rgba(30, 41, 59, 0.6);
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ajustar espaciado del header después de quitar el tagline */
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* -------------------------------------- */
+/* ESTILOS PARA EL AVATAR CON ENLACE      */
+/* -------------------------------------- */
+
+.avatar-link {
+    display: block;
+    margin: 0 auto 2rem auto;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.avatar-link:hover .avatar {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+/* Ajustar subtítulo más pequeño */
+.sidebar-subtitle {
+    font-size: 0.9rem;
+    color: var(--primary-light);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+/* -------------------------------------- */
+/* ESTILOS ESPECÍFICOS PARA CV EN INDEX   */
+/* -------------------------------------- */
+
+.experience-item {
+    margin-bottom: 1.5rem; /* Reducido de 2rem */
+    padding-bottom: 1.5rem; /* Reducido de 2rem */
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.experience-item h4 {
+    font-size: 1rem; /* Reducido de 1.1rem */
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.competence-category {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid var(--primary);
+}
+
+/* Ajustes para el hero del CV */
+#cv .hero-section {
+    text-align: center;
+    padding: 2rem 0;
+    background: none;
+    margin-bottom: 2rem;
+}
+
+#cv .hero-title {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#cv .hero-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+
+
+
+/* Mejorar espaciado del CV */
+.cv-two-cols {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.cv-col {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Responsive para CV */
+@media (max-width: 768px) {
+    .cv-two-cols {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    #cv .hero-title {
+        font-size: 2rem; /* Reducido de 2.5rem */
+    }
+    
+    #cv .hero-subtitle {
+        font-size: 0.9rem; /* Reducido de 1.1rem */
+    }
+}
+
+
+
+
+
+/* -------------------------------------- */
+/* HEADER COMPACTO CON AVATAR PEQUEÑO     */
+/* -------------------------------------- */
+
+.sidebar-header-compact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(30, 41, 59, 0.6);
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar-small {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: white;
+    box-shadow: var(--shadow);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.avatar-link:hover .avatar-small {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+}
+
+.header-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar-header-compact .sidebar-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+.sidebar-header-compact .sidebar-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 1.3;
+}
+
+/* -------------------------------------- */
+/* BOTÓN INICIO EN EL MENÚ                */
+/* -------------------------------------- */
+
+.nav li:first-child a:hover {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1e40af 100%);
+    transform: translateX(5px);
+}
+
+/* -------------------------------------- */
+/* IMÁGENES DE PROYECTOS AJUSTADAS        */
+/* -------------------------------------- */
+
+.project-image-wrap {
+    margin: 1rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: var(--gray-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* muestra la imagen completa */
+    max-height: none; /* eliminar límite */
+    box-shadow: var(--shadow);
+}
+
+
+.project-image:hover {
+    transform: scale(1.02);
+}
+
+.project-card {
+    background: var(--gray-50);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.project-card:last-child {
+    margin-bottom: 0;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.project-meta {
+    color: var(--gray-600);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.project-points {
+    padding-left: 1rem;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.project-points li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.project-points li::before {
+    content: "▸";
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: -0.75rem;
+}
+
+/* -------------------------------------- */
+/* RESPONSIVE ADJUSTMENTS                 */
+/* -------------------------------------- */
+
+@media (max-width: 768px) {
+    .sidebar-header-compact {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+    
+    .sidebar-header-compact .sidebar-title,
+    .sidebar-header-compact .sidebar-subtitle {
+        text-align: center;
+    }
+    
+    .header-text {
+        width: 100%;
+    }
+    
+    .project-image {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatar-small {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    .project-card {
+        padding: 1rem;
+    }
+    
+    .project-image {
+        max-height: 180px;
+    }
+}
+
+
+
+.nav a.active {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white !important;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.2);
+  transform: translateX(5px);
+}
+
+.sticky-title {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #f8fafc;
+    padding: 0.75rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    border-bottom: 2px solid var(--gray-200);
+    margin: 0 0 0.75rem 0;  /* sin margen superior */
+}
+
+.sticky-title:empty {
+    display: none;
+}
+
+
+
+/* ============================================= */
+/*  CHECKLIST TABLE – ESTILO TIPO LIBRO (VERDE)  */
+/* ============================================= */
+
+.checklist-table-wrapper {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+}
+
+.checklist-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.9rem;
+    border: 1px solid #c7d7c1; /* borde suave verde-gris */
+}
+
+.checklist-table th {
+    background: #e6f2e6;  /* verde suave */
+    color: #1e2d1e;
+    padding: 10px 8px;
+    border: 1px solid #c7d7c1;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.checklist-table td {
+    border: 1px solid #d9e6d9; /* verde claro */
+    padding: 8px 8px;
+    vertical-align: top;
+}
+
+.checklist-table tr:nth-child(even) {
+    background: #f7fbf7;  /* alternancia sutil */
+}
+
+.checklist-table tr:hover {
+    background: #eef7ee; /* hover verde muy suave */
+}
+
+
+
+
+/* ===================================================== */
+/*  DIAGRAMAS EN DOS COLUMNAS – IZQUIERDA MÁS ANCHA (2:1) */
+/* ===================================================== */
+
+.diagram-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+/* IZQUIERDA – 2 PARTES */
+.diagram-left {
+    flex: 2;
+}
+
+/* DERECHA – 1 PARTE */
+.diagram-right {
+    flex: 1;
+    font-size: 0.85rem;     /* texto más pequeño */
+    line-height: 1.45rem;
+}
+
+.diagram-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.10);
+}
+
+/* Títulos más discretos para no competir con el esquema */
+.diagram-right h3 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.diagram-right h4 {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+/* Listas más ajustadas */
+.diagram-right ul {
+    margin-left: 1rem;
+    padding-left: 0;
+}
+
+.diagram-right li {
+    margin-bottom: 0.4rem;
+}
+
+
+/* Margenes barra izquierda */
+
+.sidebar-full {
+    padding-top: 40px;     /* antes ~20–30px */
+    padding-bottom: 10px;
+}
+
+.nav ul {
+    margin-top: 10px;      /* reduce espacio antes del menú */
+}
+
+.nav li {
+    margin-bottom: 5px;    /* antes ~10–14px */
+}
+
+
+
+/* ============================================= */
+/*  ESTILOS PARA CONTENIDO ENRIQUECIDO          */
+/* ============================================= */
+
+.practical-insight {
+  background: #f0f7ff;
+  border-left: 4px solid #4a90e2;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.practical-insight h4 {
+  color: #2c5282;
+  margin-top: 0;
+  font-size: 0.95rem;
+}
+
+.practical-insight p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.enriched-content {
+  background: #fffaf0;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  border: 1px solid #fed7aa;
+}
+
+.enriched-content h3 {
+  color: #7c2d12;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.idea-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.category {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid var(--gray-200);
+}
+
+.category h4 {
+  margin-top: 0;
+  color: var(--gray-800);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.category ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.category li {
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.accuracy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.accuracy-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.accuracy-item h4 {
+  margin-top: 0;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.accuracy-item p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Responsive para nuevos elementos */
+@media (max-width: 768px) {
+  .idea-categories {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .accuracy-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .practical-insight,
+  .enriched-content {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+}
+
+
+
+/* ============================================= */
+/*  ESTILOS ESPECÍFICOS PARA INICIO MEJORADO    */
+/* ============================================= */
+
+/* Botones de fase en el roadmap */
+.phase-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.75rem;
+}
+
+.phase-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+}
+
+/* Mejoras para project gallery */
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background: var(--gray-50);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Competencias en grid mejorado */
+.competence-category {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid var(--primary);
+    margin-top: 1.5rem;
+}
+
+.competence-category:first-child {
+    margin-top: 0;
+}
+
+/* Responsive específico */
+@media (max-width: 768px) {
+    .phase-button {
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+    
+    .project-card {
+        padding: 1.25rem;
+    }
+    
+    .competence-category {
+        margin-top: 1rem;
+    }
+}
+
+/* Ajustes para el hero específico */
+.hero-content .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* ============================================= */
+/*  MEJORAS PARA LAS NUEVAS SECCIONES           */
+/* ============================================= */
+
+/* Grid de CTA Mejorado */
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-stage-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.cta-stage-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.stage-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.stage-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.stage-desc {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Mejoras para las feature cards existentes */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    color: var(--gray-600);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive para las mejoras */
+@media (max-width: 1024px) {
+    .cta-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .cta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .cta-stage-button {
+        padding: 1.25rem 0.75rem;
+    }
+    
+    .stage-icon {
+        font-size: 1.25rem;
+    }
+    
+    .stage-title {
+        font-size: 0.85rem;
+    }
+    
+    .stage-desc {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-card {
+        padding: 1.25rem;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+    }
+    
+    .feature-title {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* Solución para texto de botones no visible */
+.boton {
+    color: #000000; /* Texto negro para mejor contraste */
+    background-color: #f0f0f0; /* Fondo gris claro */
+    border: 2px solid #333333; /* Borde oscuro */
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/* Alternativa con fondo oscuro y texto blanco (si prefieres) */
+.boton-alternativo {
+    color: #ffffff; /* Texto blanco */
+    background-color: #2c3e50; /* Fondo azul oscuro */
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/* Si quieres mantener texto blanco pero con sombra para legibilidad */
+.boton-con-sombra {
+    color: #ffffff;
+    background-color: #3498db; /* Fondo azul */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra de texto */
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+
+/* ============================================= */
+/*  SOLUCIÓN DEFINITIVA PARA TEXTO DE BOTONES   */
+/* ============================================= */
+
+.cta-stage-button {
+    color: #ffffff !important; /* Texto blanco forzado */
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.cta-stage-button:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Estilos específicos para el texto dentro de los botones */
+.stage-title,
+.stage-desc {
+    color: #ffffff !important;
+}
+
+/* Si el problema persiste, agregar esto también */
+.cta-stage-button * {
+    color: #ffffff !important;
+}
+
+
+/* SOLUCIÓN AGREGADA AL FINAL DE ESTILOS.CSS - FORZAR COLOR BLANCO */
+.cta-stage-button,
+.cta-stage-button .stage-title,
+.cta-stage-button .stage-desc,
+.cta-stage-button span {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ============================================= */
+/*  SOLUCIÓN: TEXTO NEGRO EN BOTONES CTA        */
+/* ============================================= */
+
+.cta-stage-button {
+    color: #000000 !important; /* Texto negro */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.cta-stage-button:hover {
+    color: #000000 !important;
+    background: rgba(255, 255, 255, 1); /* Fondo blanco sólido al hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos específicos para el texto dentro de los botones */
+.stage-title,
+.stage-desc {
+    color: #000000 !important;
+}
+
+.stage-title {
+    font-weight: 700;
+}
+
+.stage-desc {
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+/* Si quieres un estilo más colorido, puedes usar esto: */
+
+.cta-stage-button {
+    color: #060608 !important;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 2px solid #bae6fd;
+}
+
+
+
+/* SOLUCIÓN MÍNIMA: Solo cambiar texto a negro */
+.cta-stage-button,
+.cta-stage-button .stage-title,
+.cta-stage-button .stage-desc,
+.cta-stage-button span,
+.cta-stage-button * {
+    color: #000000 !important;
+}
+
+
+/* ============================================= */
+/*  ESTILOS PARA FLASHCARDS INTERACTIVAS        */
+/* ============================================= */
+
+.flashcards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.flashcard {
+  height: 250px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+}
+
+.flashcard-front {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  justify-content: space-between;
+}
+
+.flashcard-back {
+  background: white;
+  color: var(--gray-800);
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.card-category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.flashcard-front h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  line-height: 1.4;
+}
+
+.hint {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.flashcard-back p {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.flashcard-back ul,
+.flashcard-back ol {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+}
+
+.flashcard-back li {
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.metric-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.metric {
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.metric.positive {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.metric.negative {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.flashcards-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.control-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flashcards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .flashcard {
+    height: 200px;
+  }
+  
+  .metric-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ============================================= */
+/*  ESTILOS MEJORADOS PARA INTERVIEW-PREP       */
+/* ============================================= */
+
+/* Mejoras para las nuevas tarjetas divididas */
+.flashcard-back p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.flashcard-back strong {
+  color: var(--primary);
+}
+
+/* Estilos específicos para categorías de interview-prep */
+.category-section {
+  margin-bottom: 3rem;
+}
+
+.category-section h3 {
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+  border-left: none;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/* Responsive específico para interview-prep */
+@media (max-width: 768px) {
+  .category-section h3 {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+
+/* -------------------------------------- */
+/* ESTILOS PARA MENÚ DESPLEGABLE          */
+/* -------------------------------------- */
+
+.nav-parent {
+    position: relative;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    position: relative;
+    padding-right: 2rem !important;
+}
+
+.nav-toggle::after {
+    content: '▸';
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-parent.active .nav-toggle::after {
+    transform: rotate(90deg);
+}
+
+.nav-submenu {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+.nav-parent.active .nav-submenu {
+    max-height: 500px;
+}
+
+.nav-submenu li {
+    margin: 0;
+}
+
+.nav-submenu a {
+    padding-left: 2rem !important;
+    font-size: 0.75rem !important;
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+    border: none !important;
+    color: var(--gray-300) !important;
+}
+
+.nav-submenu a::before {
+    display: none;
+}
+
+.nav-submenu a:hover {
+    background: rgba(37, 99, 235, 0.15) !important;
+    transform: translateX(3px) !important;
+    color: white !important;
+}
+
+.nav-submenu a.active {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+/* Estilo para los enlaces "Coming Soon" */
+.nav-submenu a[style*="color: #64748b"] {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.nav-submenu a[style*="color: #64748b"]:hover {
+    background: transparent !important;
+    transform: none !important;
+}
+
+
+
+
+/* ============================================= */
+/*  ESTILOS PARA DIAGRAMAS CENTRADOS            */
+/* ============================================= */
+
+.diagram-center {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.diagram-center .diagram-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* ============================================= */
+/*  ESTILOS PARA TABLAS SIMPLES                 */
+/* ============================================= */
+
+.simple-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.simple-table th {
+    background: var(--primary);
+    color: white;
+    padding: 12px 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.simple-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--gray-200);
+    font-size: 0.9rem;
+}
+
+.simple-table tr:nth-child(even) {
+    background: var(--gray-50);
+}
+
+.simple-table tr:hover {
+    background: var(--gray-100);
+}
+
+/* ============================================= */
+/*  ESTILOS PARA TABLAS STAKEHOLDER GRID        */
+/* ============================================= */
+
+.stakeholder-grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+}
+
+.stakeholder-grid-table th,
+.stakeholder-grid-table td {
+    padding: 8px 10px;
+    border: 1px solid var(--gray-300);
+    text-align: left;
+}
+
+.stakeholder-grid-table th {
+    background: var(--gray-100);
+    font-weight: 600;
+}
+
+.stakeholder-grid-table tr:nth-child(even) {
+    background: var(--gray-50);
+}
