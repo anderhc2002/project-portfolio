@@ -1,0 +1,435 @@
+<!-- ====================================================== -->
+<!-- CHAPTER 27 – DOCUMENT MANAGEMENT AND DOCUMENT CONTROL  -->
+<!-- ====================================================== -->
+
+<section id="document-management-control">
+  <p class="section-text">
+    Este capítulo diferencia claramente entre <strong>document management</strong> y
+    <strong>document control</strong> dentro de un proyecto minero. Ambos tratan con
+    documentos, pero cumplen funciones distintas: uno gestiona el almacenamiento y
+    recuperación; el otro gobierna el ciclo de vida, versiones y trazabilidad de los
+    documentos esenciales del proyecto.
+  </p>
+
+  <div class="practical-insight">
+    <h4>Idea clave</h4>
+    <p>
+      En proyectos de varios años y con alta rotación de personas, la única forma de
+      proteger los intereses del Owner es tener, desde el inicio, un sistema robusto de
+      manejo y control de documentos. Sin sistema, la memoria del proyecto se pierde.
+    </p>
+  </div>
+</section>
+
+
+<section class="card">
+  <h1 class="section-title">¿Document Management es lo mismo que Document Control?</h1>
+</section>
+
+<section class="card">
+  <h2 class="section-subtitle">Diferencias básicas</h2>
+  <p class="section-text">
+    Aunque ambos conceptos se confunden, no son equivalentes:
+  </p>
+  <ul class="section-list">
+    <li>
+      <strong>Document Management</strong> se enfoca en <em>almacenamiento, indexación,
+      búsqueda, acceso y archivo</em> de documentos (particularmente los de vida corta:
+      correos, cartas, minutas, formularios).
+    </li>
+    <li>
+      <strong>Document Control</strong> se enfoca en <em>controlar el ciclo de vida</em> de
+      documentos esenciales y multiversión (planos, especificaciones, POs, contratos),
+      asegurando que solo la versión vigente se use en el proyecto.
+    </li>
+  </ul>
+
+  <p class="section-text">
+    En la práctica, todos los proyectos requieren un sistema de document control; la
+    mayoría, además, necesitan un sistema de document management separado.
+  </p>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- DOCUMENT MANAGEMENT SYSTEM                             -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Document Management</h1>
+</section>
+
+<section class="card">
+  <h2 class="section-subtitle">Definición</h2>
+  <p class="section-text">
+    Un <strong>document management system (DMS)</strong> es el sistema de
+    almacenamiento y recuperación electrónica de documentos. Gestiona el escaneo,
+    digitalización, indexación, búsqueda, versiones simples, archivo y eliminación de
+    documentos a lo largo del proyecto.
+  </p>
+
+  <h2 class="section-subtitle">Elementos deseables de un DMS</h2>
+  <ul class="section-list">
+    <li>Capacidad para manejar cientos de documentos diarios en múltiples formatos.</li>
+    <li>Digitalización de todos los tipos de documentos del proyecto
+      (ingeniería, AFEs, POs, facturas, contratos, registros de permisos, etc.).</li>
+    <li>Acceso robusto vía Internet e <em>Internet portal</em> seguro.</li>
+    <li>Capacidad de trabajar sobre múltiples servidores y software.</li>
+    <li>Gestión de versiones para documentos de una sola versión activa.</li>
+    <li>Distribución mediante enlaces protegidos por contraseña.</li>
+    <li>Motor de búsqueda por palabras clave y campos de índice.</li>
+    <li>Visualización de archivos con texto completo recuperable.</li>
+  </ul>
+
+  <h2 class="section-subtitle">Beneficios de un DMS</h2>
+  <ul class="section-list">
+    <li>Elimina la pérdida de documentos; todo se almacena e indexa en un repositorio central.</li>
+    <li>Reduce drásticamente el tiempo de búsqueda y recuperación.</li>
+    <li>Convierte documentos en papel a versiones electrónicas fáciles de compartir.</li>
+    <li>Mejora la colaboración y comunicación entre equipos dispersos.</li>
+    <li>
+      Facilita la recopilación y consolidación de registros para operación a largo plazo
+      (as-built, manuales, garantías, etc.).
+    </li>
+  </ul>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- DOCUMENT CONTROL SYSTEM                                -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Document Control</h1>
+</section>
+
+<section class="card">
+  <h2 class="section-subtitle">Definición</h2>
+  <p class="section-text">
+    El <strong>document control system</strong> gobierna el ciclo de vida de los
+    documentos esenciales del proyecto. Su función central es el
+    <strong>version control</strong>: asegurar que solo la versión correcta y vigente
+    esté disponible para ingeniería, compras, construcción y operación.
+  </p>
+
+  <h2 class="section-subtitle">Elementos de un sistema de Document Control</h2>
+  <ul class="section-list">
+    <li>Flujo controlado de documentos entre Owner, EPCM, contratistas y proveedores.</li>
+    <li>Seguimiento de cada documento desde su emisión hasta el as-built final.</li>
+    <li>
+      Archivo de registros originales como parte de QA/QC; solo copias se distribuyen
+      a usuarios.
+    </li>
+    <li>Archivo de toda la correspondencia (cartas, emails, minutas) en formato recuperable.</li>
+    <li>Uso exclusivo de formatos estándar de planos y reglas de <em>layering</em> en CAD.</li>
+    <li>Sistema de numeración de planos que impide duplicados.</li>
+    <li>Gestión explícita de documentos obsoletos para impedir su uso y mantener trazabilidad.</li>
+    <li>Rastreo de <em>vendor data</em> y manuales mediante número de PO y códigos VDR.</li>
+    <li>Soporte directo a las funciones de calidad y cumplimiento regulatorio del proyecto.</li>
+  </ul>
+
+  <h2 class="section-subtitle">Beneficios de un sistema de Document Control</h2>
+  <ul class="section-list">
+    <li>Asegura que todos trabajen siempre con la última versión aprobada.</li>
+    <li>Genera una auditoría completa de cambios, fechas y responsables.</li>
+    <li>Aporta un nivel de seguridad y control alineado con requisitos regulatorios.</li>
+    <li>
+      Centraliza el almacenamiento electrónico según jerarquía organizacional y tipo de
+      documento.
+    </li>
+    <li>Habilita acceso web controlado y consistente a documentos y flujos.</li>
+  </ul>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- ¿DOCUMENT MANAGEMENT, DOCUMENT CONTROL O AMBOS?        -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Combinando Document Management y Document Control</h1>
+</section>
+
+<section class="card">
+  <h2 class="section-subtitle">Estrategia recomendada</h2>
+  <p class="section-text">
+    Todo proyecto debe contar con un sistema formal de document control. Para la mayoría
+    de proyectos grandes, se recomienda complementar con un DMS que absorba el alto
+    volumen de documentos de vida corta. En proyectos pequeños, es posible que el sistema
+    de document control absorba también el rol de management, pero solo si el flujo de
+    documentos transitorios es limitado.
+  </p>
+
+  <p class="section-text">
+    La recomendación general del libro es usar <strong>ambos sistemas</strong>, porque
+    pocos sistemas comerciales pueden cubrir simultáneamente la prescripción de control
+    y la flexibilidad de manejo masivo de datos.
+  </p>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- FLOWCHART 27.1 – DOCUMENT MANAGEMENT AND CONTROL       -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">Flujo de Document Management y Document Control</h1>
+</section>
+
+<section class="card">
+  <h2 class="section-subtitle">Flowchart 27.1 – Document Management and Document Control</h2>
+  <p class="section-text">
+    El flujo integra la gestión de documentos dentro de la preparación del Project
+    Execution Plan y de la organización de proyecto. Muestra cómo las decisiones de
+    sistemas, procesos y protocolos de control se conectan con el kickoff de proyecto.
+  </p>
+
+  <div class="diagram-layout">
+    <div class="diagram-left">
+      <img
+        src="assets/stages/Management/Chapter 27 Document Management and Document Control/FLOWCHART 27.1 Document management and document control.jpg"
+        alt="Flowchart 27.1 – Document management and document control"
+        class="diagram-image"
+      >
+    </div>
+
+    <div class="diagram-right">
+      <h4>Puntos clave del flujo</h4>
+      <ul class="section-list">
+        <li>Se parte del <strong>Set Up Project</strong> y la designación de la Project Team Organization.</li>
+        <li>
+          Durante el desarrollo de la estrategia y la planificación se finaliza el
+          Project Execution Plan y se definen responsabilidades y autoridad.
+        </li>
+        <li>
+          Se decide qué sistemas utilizar (Owner, EPCM o nuevos) para document management
+          y document control.
+        </li>
+        <li>
+          Se establecen document management y document control como procesos formales,
+          antes del Project Kickoff.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- CHECKLIST 27.1 – DOCUMENT MANAGEMENT AND CONTROL       -->
+<!-- ====================================================== -->
+
+<section class="card">
+  <h1 class="section-title">CHECKLIST – Document Management and Document Control</h1>
+</section>
+
+<section class="card">
+  <h2 class="section-subtitle">Checklist 27.1</h2>
+  <p class="section-text">
+    Lista de verificación para asegurar que el sistema de gestión y control de documentos
+    esté completamente definido e implementado antes del Project Kickoff.
+  </p>
+
+  <div class="checklist-table-wrapper">
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Item</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Initials</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Project Execution Plan — finalized</td>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Project team — appointed</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>A. Capable personnel to manage document handling — hired</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>B. Organizational responsibilities — defined</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>C. Levels of authority — set</td>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Robust Internet access, including an Internet portal — installed</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>A. Web-based access and control — established</td>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Document-handling systems choices — investigated</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>A. Owner’s system, EPCM’s, or new? — decision made</td>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>Document management system — in place</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>A. Documents to be controlled — cataloged</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>1. Owner</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>2. EPCM</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>3. Other</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>B. Filing structure — set</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>C. Subject areas — defined</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>D. Document collection process — established</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>E. Centralized storage and retrieval system — established</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>F. Electronic digitization capability — functioning</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>G. Keyword or phrase search engine — provided</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>H. Password access protection — adopted</td>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td>Document control system — in place for complete document life cycle</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>A. Control protocols — established</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>B. Project drawing sizes — standardized</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>C. Unique document number system(s) — adopted</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>D. Project’s essential key documents — identified</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>E. Document tracking (through final field as-built) — in place</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>F. Flow between project entities — controlled</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>G. Original records storage — in place</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>H. Strict version control — in use</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>1. Change control logs — established</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>2. Obsolete documents — usage disallowed</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>I. Regulatory compliance requirements — functioning</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>J. Audit trail — established</td>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>All correspondence (electronic and paper) — filed for retrieval</td>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td>8</td>
+          <td>Vendor data — compiled and recorded</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
