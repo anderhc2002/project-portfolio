@@ -203,3 +203,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cargar la sección indicada en la URL (o Inicio)
     renderSection(sectionFromHash());
 });
+// --------------------------------------
+// Visor de imágenes: clic para ampliar, Esc o clic para cerrar
+// --------------------------------------
+document.addEventListener('click', function (e) {
+  const img = e.target.closest('#content img.zoomable, #content img.project-image, #content .photo-grid img');
+  if (!img) return;
+  const box = document.createElement('div');
+  box.className = 'lightbox';
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-label', img.alt || 'Imagen ampliada');
+  box.innerHTML = '<button class="lightbox-close" aria-label="Cerrar">✕</button>';
+  const big = document.createElement('img');
+  big.src = img.currentSrc || img.src;
+  big.alt = img.alt;
+  box.appendChild(big);
+  const close = () => { box.remove(); document.removeEventListener('keydown', onKey); };
+  const onKey = (ev) => { if (ev.key === 'Escape') close(); };
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', onKey);
+  document.body.appendChild(box);
+  box.querySelector('.lightbox-close').focus();
+});

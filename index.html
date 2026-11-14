@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ander Huallpa · Control de Proyectos</title>
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#17233b">
     <meta name="description" content="Portafolio de Ander Huallpa: control de proyectos y PMO en construcción (EVM, Power BI, Primavera P6)">
     <meta property="og:title" content="Ander Huallpa - Bachiller de Ingeniería Civil">
     <meta property="og:description" content="Portafolio de Ander Huallpa: control de proyectos y PMO en construcción (EVM, Power BI, Primavera P6)">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tema.css">
+    <link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <div class="layout">
@@ -24,32 +23,32 @@
                 </a>
                 <div class="header-text">
                     <h2 class="sidebar-title">Ander Huallpa</h2>
-                    <h3 class="sidebar-subtitle">Control de Proyectos · PMO</h3>
+                    <h3 class="sidebar-subtitle">Control de proyectos y PMO</h3>
                 </div>
                 <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMobileMenu()">☰</button>
             </div>
 
             <nav class="nav" id="main-nav">
                 <ul>
-                    <li><a href="#inicio" data-section="inicio.html" onclick="loadSection('inicio.html'); return false;">🏠 Inicio</a></li>
-                    <li><a href="#experiencia" data-section="experiencia.html" onclick="loadSection('experiencia.html'); return false;">💼 Experiencia</a></li>
-                    <li><a href="#dashboards" data-section="dashboards.html" onclick="loadSection('dashboards.html'); return false;">📊 Dashboards</a></li>
+                    <li><a href="#inicio" data-section="inicio.html" onclick="loadSection('inicio.html'); return false;"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a></li>
+                    <li><a href="#experiencia" data-section="experiencia.html" onclick="loadSection('experiencia.html'); return false;"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3M3 12h18"/></svg>Experiencia</a></li>
+                    <li><a href="#dashboards" data-section="dashboards.html" onclick="loadSection('dashboards.html'); return false;"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Dashboards</a></li>
 
                     <!-- RECURSOS (notas de estudio del libro) -->
                     <li class="nav-parent">
-                        <a href="#recursos" class="nav-toggle">📚 Recursos</a>
+                        <a href="#recursos" class="nav-toggle"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4zM20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg>Recursos</a>
                         <ul class="nav-submenu">
-                            <li><a href="#recursos" data-section="recursos.html" onclick="loadSection('recursos.html'); return false;">📚 Todos los recursos</a></li>
-                            <li><a href="#recursos/cap-05-scoping-evaluation" data-section="recursos/cap-05-scoping-evaluation.html" onclick="loadSection('recursos/cap-05-scoping-evaluation.html'); return false;">Opportunity · Cap. 5 – Scoping Evaluation</a></li>
-                            <li><a href="#recursos/cap-06-management-review" data-section="recursos/cap-06-management-review.html" onclick="loadSection('recursos/cap-06-management-review.html'); return false;">Opportunity · Cap. 6 – Management Review</a></li>
-                            <li><a href="#recursos/cap-07-prefeasibility-study" data-section="recursos/cap-07-prefeasibility-study.html" onclick="loadSection('recursos/cap-07-prefeasibility-study.html'); return false;">Viability · Cap. 7 – Prefeasibility Study</a></li>
-                            <li><a href="#recursos/cap-08-feasibility-study" data-section="recursos/cap-08-feasibility-study.html" onclick="loadSection('recursos/cap-08-feasibility-study.html'); return false;">Viability · Cap. 8 – Feasibility Study</a></li>
-                            <li><a href="#recursos/cap-24-project-controls" data-section="recursos/cap-24-project-controls.html" onclick="loadSection('recursos/cap-24-project-controls.html'); return false;">Planning · Cap. 24 – Project Controls</a></li>
-                            <li><a href="#recursos/cap-27-document-control" data-section="recursos/cap-27-document-control.html" onclick="loadSection('recursos/cap-27-document-control.html'); return false;">Planning · Cap. 27 – Document Control</a></li>
+                            <li><a href="#recursos" data-section="recursos.html" onclick="loadSection('recursos.html'); return false;">Todos los recursos</a></li>
+                            <li><a href="#recursos/cap-05-scoping-evaluation" data-section="recursos/cap-05-scoping-evaluation.html" onclick="loadSection('recursos/cap-05-scoping-evaluation.html'); return false;">Cap. 5, Scoping Evaluation</a></li>
+                            <li><a href="#recursos/cap-06-management-review" data-section="recursos/cap-06-management-review.html" onclick="loadSection('recursos/cap-06-management-review.html'); return false;">Cap. 6, Management Review</a></li>
+                            <li><a href="#recursos/cap-07-prefeasibility-study" data-section="recursos/cap-07-prefeasibility-study.html" onclick="loadSection('recursos/cap-07-prefeasibility-study.html'); return false;">Cap. 7, Prefeasibility Study</a></li>
+                            <li><a href="#recursos/cap-08-feasibility-study" data-section="recursos/cap-08-feasibility-study.html" onclick="loadSection('recursos/cap-08-feasibility-study.html'); return false;">Cap. 8, Feasibility Study</a></li>
+                            <li><a href="#recursos/cap-24-project-controls" data-section="recursos/cap-24-project-controls.html" onclick="loadSection('recursos/cap-24-project-controls.html'); return false;">Cap. 24, Project Controls</a></li>
+                            <li><a href="#recursos/cap-27-document-control" data-section="recursos/cap-27-document-control.html" onclick="loadSection('recursos/cap-27-document-control.html'); return false;">Cap. 27, Document Control</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="#contacto" data-section="contacto.html" onclick="loadSection('contacto.html'); return false;">✉️ Contacto</a></li>
+                    <li><a href="#contacto" data-section="contacto.html" onclick="loadSection('contacto.html'); return false;"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>Contacto</a></li>
 
                     <!-- OCULTO DE MOMENTO:
                          · Fases 4–7 (Approval, Execution, Completion, Operations): secciones/approval, execution, completion, operations
@@ -70,14 +69,7 @@
             <div id="content"></div>
 
             <footer>
-                <div style="max-width:600px;margin:0 auto;">
-                    <p style="margin-bottom:0.5rem;font-size:0.9rem;color:var(--gray-600);">
-                        © 2026 · Portafolio Profesional · Ander Huallpa
-                    </p>
-                    <p style="font-size:0.8rem;color:var(--gray-500);">
-                        Ingeniería Civil · Control de Proyectos · PMO
-                    </p>
-                </div>
+                <p>© 2026 Ander Huallpa. Ingeniería civil, control de proyectos y PMO.</p>
             </footer>
         </main>
     </div>

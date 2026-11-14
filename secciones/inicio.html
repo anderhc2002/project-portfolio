@@ -1,113 +1,112 @@
 <!-- Hero -->
-<section class="hero-section">
-  <div class="hero-content">
-      <h1 class="hero-title">Ander Huallpa</h1>
-      <p class="hero-subtitle">
-          Bachiller de Ingeniería Civil · <strong class="gradient-text">Control de Proyectos y PMO en construcción</strong>
+<section class="hero">
+  <div class="hero-text">
+      <h1 class="hero-name">Ander Huallpa</h1>
+      <p class="hero-role">Bachiller en Ingeniería Civil, especializado en control de proyectos y PMO en construcción</p>
+      <p class="hero-lead">
+          Convierto el avance de obra en información para decidir: curvas S, valor ganado y flujo de caja
+          para que el equipo vea a tiempo dónde está el proyecto y hacia dónde va.
       </p>
-      <div class="contact-actions">
-          <a class="contact-btn contact-btn-primary" href="assets/cv/CV-Ander-Huallpa.pdf" target="_blank" rel="noopener">📄 Descargar CV</a>
-          <a class="contact-btn" href="mailto:ander.huallpa@outlook.com">✉️ ander.huallpa@outlook.com</a>
-          <a class="contact-btn" href="https://linkedin.com/in/anderhc2002/" target="_blank" rel="noopener">💼 LinkedIn</a>
+      <div class="hero-actions">
+          <a class="btn btn-primary" href="assets/cv/CV-Ander-Huallpa.pdf" target="_blank" rel="noopener">Descargar CV</a>
+          <a class="btn" href="mailto:ander.huallpa@outlook.com">Escribirme</a>
+          <a class="btn" href="https://linkedin.com/in/anderhc2002/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
   </div>
+
+  <figure class="hero-photo">
+      <img src="assets/img/ander-huallpa.jpg" alt="Retrato de Ander Huallpa">
+  </figure>
+
+  <svg class="hero-curve" viewBox="0 0 1000 160" preserveAspectRatio="none" aria-hidden="true">
+      <line class="curve-grid" x1="0" y1="150" x2="1000" y2="150"/>
+      <line class="curve-cut" x1="560" y1="10" x2="560" y2="150"/>
+      <path class="curve-pv" d="M0,150 C220,150 300,135 420,95 S640,18 1000,12"/>
+      <path class="curve-ev" d="M0,150 C220,150 330,140 440,112 S530,92 560,88"/>
+      <circle class="curve-dot" cx="560" cy="88" r="5"/>
+  </svg>
+  <p class="hero-curve-legend"><span class="lg-pv">Planificado</span><span class="lg-ev">Ganado</span></p>
 </section>
 
 <!-- Cifras clave -->
-<section class="kpi-grid">
-  <div class="kpi-card">
-      <span class="kpi-value">S/ 324MM</span>
-      <span class="kpi-label">APP COAR Centro: 3 colegios en Cusco, Pasco y Huancavelica</span>
-  </div>
-  <div class="kpi-card">
-      <span class="kpi-value">S/ 58MM</span>
-      <span class="kpi-label">en 3 paquetes de subcontratos licitados</span>
-  </div>
-  <div class="kpi-card">
-      <span class="kpi-value">15,000 m²</span>
-      <span class="kpi-label">de vías internas con seguimiento de avance ganado</span>
-  </div>
-  <div class="kpi-card">
-      <span class="kpi-value">+5</span>
-      <span class="kpi-label">procesos de licitación liderados en Aceros Arequipa</span>
-  </div>
-</section>
+<dl class="kpi-strip">
+  <div><dt>S/ 324MM</dt><dd>APP COAR Centro, 3 colegios en Cusco, Pasco y Huancavelica</dd></div>
+  <div><dt>S/ 58MM</dt><dd>en 3 paquetes de subcontratos licitados</dd></div>
+  <div><dt>15,000 m²</dt><dd>de vías internas con seguimiento de avance ganado</dd></div>
+  <div><dt>+5</dt><dd>procesos de licitación liderados en Aceros Arequipa</dd></div>
+</dl>
 
 <!-- Perfil -->
 <section class="card">
-  <h2 class="section-title">Perfil Profesional</h2>
+  <h2 class="section-title">Perfil profesional</h2>
   <p class="section-text">
       Bachiller de Ingeniería Civil con experiencia en oficinas de gestión de proyectos (PMO) en el sector de construcción.
-      Experiencia en control de avance bajo <strong>EVM</strong>, seguimiento de cronogramas y reportabilidad.
-      Manejo de <strong>Excel, Power BI, Primavera P6 y MS Project</strong> orientados al control de proyectos.
+      Experiencia en control de avance bajo EVM, seguimiento de cronogramas y reportabilidad.
+      Manejo de Excel, Power BI, Primavera P6 y MS Project orientados al control de proyectos.
   </p>
 
-  <div class="cta-grid">
-      <button onclick="loadSection('experiencia.html')" class="cta-stage-button">
-          <span class="stage-icon">💼</span>
-          <span class="stage-title">Experiencia</span>
-          <span class="stage-desc">Marhnos · Aceros Arequipa</span>
-      </button>
-      <button onclick="loadSection('dashboards.html')" class="cta-stage-button">
-          <span class="stage-icon">📊</span>
-          <span class="stage-title">Dashboards</span>
-          <span class="stage-desc">Power BI · EVM · Cash flow</span>
-      </button>
-      <button onclick="loadSection('recursos.html')" class="cta-stage-button">
-          <span class="stage-icon">📚</span>
-          <span class="stage-title">Recursos</span>
-          <span class="stage-desc">Notas de estudio en Project Management</span>
-      </button>
-      <button onclick="loadSection('contacto.html')" class="cta-stage-button">
-          <span class="stage-icon">✉️</span>
-          <span class="stage-title">Contacto</span>
-          <span class="stage-desc">Correo · Teléfono · LinkedIn</span>
-      </button>
-  </div>
+  <nav class="jump-grid" aria-label="Secciones del portafolio">
+      <a href="#experiencia" onclick="loadSection('experiencia.html'); return false;">
+          <strong>Experiencia</strong>
+          <span>Marhnos y Aceros Arequipa</span>
+      </a>
+      <a href="#dashboards" onclick="loadSection('dashboards.html'); return false;">
+          <strong>Dashboards</strong>
+          <span>Power BI para EVM, cash flow y WBS</span>
+      </a>
+      <a href="#recursos" onclick="loadSection('recursos.html'); return false;">
+          <strong>Recursos</strong>
+          <span>Notas de estudio en project management</span>
+      </a>
+      <a href="#contacto" onclick="loadSection('contacto.html'); return false;">
+          <strong>Contacto</strong>
+          <span>Correo, teléfono y LinkedIn</span>
+      </a>
+  </nav>
 </section>
 
 <!-- Formación -->
 <section class="card">
-  <h2 class="section-title">Formación y Competencias</h2>
+  <h2 class="section-title">Formación y competencias</h2>
 
   <div class="cv-two-cols">
       <div class="cv-col">
-          <h4 class="competence-category">🎓 Formación Académica</h4>
+          <h3 class="competence-category">Formación académica</h3>
           <ul class="section-list">
-              <li><strong>Universidad de Ingeniería y Tecnología (UTEC)</strong> · 2019 – 2024<br>Bachiller de Ingeniería Civil · Décimo Superior · Beca Integral</li>
-              <li><strong>Colegio de Alto Rendimiento de Ica (COAR Ica)</strong> · 2016 – 2018<br>Programa del Diploma del Bachillerato Internacional</li>
+              <li><strong>Universidad de Ingeniería y Tecnología (UTEC)</strong>, 2019 – 2024<br>Bachiller de Ingeniería Civil. Décimo Superior, Beca Integral.</li>
+              <li><strong>Colegio de Alto Rendimiento de Ica (COAR Ica)</strong>, 2016 – 2018<br>Programa del Diploma del Bachillerato Internacional.</li>
           </ul>
 
-          <h4 class="competence-category">📚 Formación Complementaria</h4>
+          <h3 class="competence-category">Formación complementaria</h3>
           <ul class="section-list">
-              <li>Especialización en Control de Proyectos y Primavera P6 (en proceso) — Back to Back Ingeniería y Consultoría (2026)</li>
-              <li>Análisis Financiero para la Evaluación de Proyectos — ADUNI (2026)</li>
-              <li>Gestión de Proyectos con enfoque en PMI — ESAN Graduate School of Business (2025)</li>
-              <li>Especialización en Oficina Técnica en Proyectos de Construcción — Costos Educa (2025)</li>
+              <li>Especialización en Control de Proyectos y Primavera P6 (en proceso), Back to Back Ingeniería y Consultoría, 2026</li>
+              <li>Análisis Financiero para la Evaluación de Proyectos, ADUNI, 2026</li>
+              <li>Gestión de Proyectos con enfoque en PMI, ESAN Graduate School of Business, 2025</li>
+              <li>Especialización en Oficina Técnica en Proyectos de Construcción, Costos Educa, 2025</li>
           </ul>
       </div>
 
       <div class="cv-col">
-          <h4 class="competence-category">🛠️ Software</h4>
+          <h3 class="competence-category">Software</h3>
           <ul class="section-list">
-              <li>Power BI avanzado — IFP (2025)</li>
-              <li>Primavera P6 intermedio — Risk Perú (2025)</li>
-              <li>MS Project intermedio — CIAR (2024)</li>
+              <li>Power BI avanzado, IFP, 2025</li>
+              <li>Primavera P6 intermedio, Risk Perú, 2025</li>
+              <li>MS Project intermedio, CIAR, 2024</li>
               <li>Excel</li>
           </ul>
 
-          <h4 class="competence-category">📈 Control de Proyectos</h4>
+          <h3 class="competence-category">Control de proyectos</h3>
           <ul class="section-list">
-              <li>EVM: PV–EV–AC, SPI/CPI, forecast/EAC y trends</li>
+              <li>EVM: PV, EV, AC, SPI/CPI, forecast/EAC y trends</li>
               <li>Seguimiento de cronogramas y curvas S</li>
               <li>Flujos de caja y conciliación de Estados de Pago</li>
               <li>Licitaciones, TdR y cuadros comparativos técnico-económicos</li>
           </ul>
 
-          <h4 class="competence-category">🌐 Idiomas</h4>
+          <h3 class="competence-category">Idiomas</h3>
           <ul class="section-list">
-              <li>Español: Nativo</li>
-              <li>Inglés: Intermedio (B1–B2)</li>
+              <li>Español nativo</li>
+              <li>Inglés intermedio (B1–B2)</li>
           </ul>
       </div>
   </div>
@@ -117,8 +116,8 @@
 <section class="card">
   <h2 class="section-title">Voluntariados</h2>
   <ul class="section-list">
-      <li><strong>Sumak Wasi:</strong> construcción de viviendas provisionales para 5 familias de bajos recursos, Chincha, Ica.</li>
-      <li><strong>Renasca:</strong> mantenimiento y restauración del centro administrativo Inca Los Paredones, Nasca, Ica.</li>
+      <li><strong>Sumak Wasi:</strong> construcción de viviendas provisionales para 5 familias de bajos recursos en Chincha, Ica.</li>
+      <li><strong>Renasca:</strong> mantenimiento y restauración del centro administrativo Inca Los Paredones en Nasca, Ica.</li>
       <li><strong>Mentoría académica</strong> a estudiantes de Beca 18 en Matemática y Física, UTEC.</li>
       <li><strong>UTEC Investigators:</strong> ponencias y difusión del conocimiento en Ingeniería Civil.</li>
   </ul>
