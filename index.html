@@ -19,154 +19,42 @@
         <!-- SIDEBAR -->
         <aside class="sidebar-full">
             <div class="sidebar-header-compact">
-                <a href="https://linkedin.com/in/anderhc2002" target="_blank" class="avatar-link">
-                    <div class="avatar-small">AH</div>
+                <a href="https://linkedin.com/in/anderhc2002/" target="_blank" rel="noopener" class="avatar-link">
+                    <img src="assets/img/perfil.jpg" alt="Ander Huallpa en obra" class="avatar-small avatar-photo">
                 </a>
                 <div class="header-text">
                     <h2 class="sidebar-title">Ander Huallpa</h2>
-                    <h3 class="sidebar-subtitle">Bachiller de Ingeniería Civil</h3>
+                    <h3 class="sidebar-subtitle">Control de Proyectos · PMO</h3>
                 </div>
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMobileMenu()">☰</button>
             </div>
 
-            <nav class="nav">
+            <nav class="nav" id="main-nav">
                 <ul>
-                    <!-- INICIO -->
-                    <li>
-                        <a href="#"
-                           data-section="inicio.html"
-                           onclick="loadSection('inicio.html'); return false;">
-                            🏠 Inicio
-                        </a>
-                    </li>
+                    <li><a href="#inicio" data-section="inicio.html" onclick="loadSection('inicio.html'); return false;">🏠 Inicio</a></li>
+                    <li><a href="#experiencia" data-section="experiencia.html" onclick="loadSection('experiencia.html'); return false;">💼 Experiencia</a></li>
+                    <li><a href="#dashboards" data-section="dashboards.html" onclick="loadSection('dashboards.html'); return false;">📊 Dashboards</a></li>
 
-                    <!-- OPPORTUNITY -->
+                    <!-- RECURSOS (notas de estudio del libro) -->
                     <li class="nav-parent">
-                        <a href="#" class="nav-toggle">🎯 1 · Opportunity</a>
+                        <a href="#recursos" class="nav-toggle">📚 Recursos</a>
                         <ul class="nav-submenu">
-                            <li>
-                                <a href="#"
-                                   data-section="opportunity/Chapter 5 Scoping Evaluation.html"
-                                   onclick="loadSection('opportunity/Chapter 5 Scoping Evaluation.html'); return false;">
-                                    Chapter 5 – Scoping Evaluation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="opportunity/Chapter 6 Management Review.html"
-                                   onclick="loadSection('opportunity/Chapter 6 Management Review.html'); return false;">
-                                    Chapter 6 – Management Review
-                                </a>
-                            </li>
+                            <li><a href="#recursos" data-section="recursos.html" onclick="loadSection('recursos.html'); return false;">📚 Todos los recursos</a></li>
+                            <li><a href="#recursos/cap-05-scoping-evaluation" data-section="recursos/cap-05-scoping-evaluation.html" onclick="loadSection('recursos/cap-05-scoping-evaluation.html'); return false;">Opportunity · Cap. 5 – Scoping Evaluation</a></li>
+                            <li><a href="#recursos/cap-06-management-review" data-section="recursos/cap-06-management-review.html" onclick="loadSection('recursos/cap-06-management-review.html'); return false;">Opportunity · Cap. 6 – Management Review</a></li>
+                            <li><a href="#recursos/cap-07-prefeasibility-study" data-section="recursos/cap-07-prefeasibility-study.html" onclick="loadSection('recursos/cap-07-prefeasibility-study.html'); return false;">Viability · Cap. 7 – Prefeasibility Study</a></li>
+                            <li><a href="#recursos/cap-08-feasibility-study" data-section="recursos/cap-08-feasibility-study.html" onclick="loadSection('recursos/cap-08-feasibility-study.html'); return false;">Viability · Cap. 8 – Feasibility Study</a></li>
+                            <li><a href="#recursos/cap-24-project-controls" data-section="recursos/cap-24-project-controls.html" onclick="loadSection('recursos/cap-24-project-controls.html'); return false;">Planning · Cap. 24 – Project Controls</a></li>
+                            <li><a href="#recursos/cap-27-document-control" data-section="recursos/cap-27-document-control.html" onclick="loadSection('recursos/cap-27-document-control.html'); return false;">Planning · Cap. 27 – Document Control</a></li>
                         </ul>
                     </li>
 
-                    <!-- VIABILITY -->
-                    <li class="nav-parent">
-                        <a href="#" class="nav-toggle">📊 2 · Viability</a>
-                        <ul class="nav-submenu">
-                            <li>
-                                <a href="#"
-                                   data-section="viability/Chapter 7 Prefeasibility Study.html"
-                                   onclick="loadSection('viability/Chapter 7 Prefeasibility Study.html'); return false;">
-                                    Chapter 7 – Prefeasibility Study
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="viability/Chapter 8 Feasibility Study.html"
-                                   onclick="loadSection('viability/Chapter 8 Feasibility Study.html'); return false;">
-                                    Chapter 8 – Feasibility Study
-                                </a>
-                            </li>                            
-                        </ul>
-                    </li>
+                    <li><a href="#contacto" data-section="contacto.html" onclick="loadSection('contacto.html'); return false;">✉️ Contacto</a></li>
 
-                    <!-- PLANNING -->
-                    <li class="nav-parent">
-                        <a href="#" class="nav-toggle">📅 3 · Planning</a>
-                        <ul class="nav-submenu">
-                            <li>
-                                <a href="#"
-                                   data-section="planning/Chapter 24 Project Controls.html"
-                                   onclick="loadSection('planning/Chapter 24 Project Controls.html'); return false;">
-                                    Chapter 24 – Project Controls
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="planning/Chapter 27 Document Management and Document Control.html"
-                                   onclick="loadSection('planning/Chapter 27 Document Management and Document Control.html'); return false;">
-                                    Chapter 27 – Document Management and Document Control
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <!-- Fases 4–7 (Approval, Execution, Completion, Operations) ocultas hasta completar su contenido.
-                         Los archivos siguen en secciones/approval, execution, completion y operations. -->
-
-                    <!-- PMBOK 7 GUIDE -->
-                    <li class="nav-parent">
-                        <a href="#" class="nav-toggle">📖 PMBOK 7 Guide</a>
-                        <ul class="nav-submenu">
-                            <li>
-                                <a href="#"
-                                   data-section="Managing Projects With PMBOK 7/Delivery Performance Domain.html"
-                                   onclick="loadSection('Managing Projects With PMBOK 7/Delivery Performance Domain.html'); return false;">
-                                    Delivery Performance Domain
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="Managing Projects With PMBOK 7/Development Approach and Life Cycle Performance Domain.html"
-                                   onclick="loadSection('Managing Projects With PMBOK 7/Development Approach and Life Cycle Performance Domain.html'); return false;">
-                                    Development Approach & Life Cycle
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="Managing Projects With PMBOK 7/Measurement Performance Domain.html"
-                                   onclick="loadSection('Managing Projects With PMBOK 7/Measurement Performance Domain.html'); return false;">
-                                    Measurement Performance Domain
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="Managing Projects With PMBOK 7/Project Work Performance Domain.html"
-                                   onclick="loadSection('Managing Projects With PMBOK 7/Project Work Performance Domain.html'); return false;">
-                                    Project Work Performance Domain
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="Managing Projects With PMBOK 7/Stakeholder Performance Domain.html"
-                                   onclick="loadSection('Managing Projects With PMBOK 7/Stakeholder Performance Domain.html'); return false;">
-                                    Stakeholder Performance Domain
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="Managing Projects With PMBOK 7/Team Performance Domain.html"
-                                   onclick="loadSection('Managing Projects With PMBOK 7/Team Performance Domain.html'); return false;">
-                                    Team Performance Domain
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="Managing Projects With PMBOK 7/Uncertainty Performance Domain.html"
-                                   onclick="loadSection('Managing Projects With PMBOK 7/Uncertainty Performance Domain.html'); return false;">
-                                    Uncertainty Performance Domain
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   data-section="Managing Projects With PMBOK 7/Tailoring.html"
-                                   onclick="loadSection('Managing Projects With PMBOK 7/Tailoring.html'); return false;">
-                                    Tailoring
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    <!-- OCULTO DE MOMENTO:
+                         · Fases 4–7 (Approval, Execution, Completion, Operations): secciones/approval, execution, completion, operations
+                         · Guía PMBOK 7: secciones/Managing Projects With PMBOK 7/
+                         Los archivos siguen en el repositorio; para mostrarlos, agregar sus enlaces aquí. -->
                 </ul>
             </nav>
         </aside>
@@ -193,9 +81,6 @@
             </footer>
         </main>
     </div>
-
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
 
     <script src="loader.js"></script>
 </body>

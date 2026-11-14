@@ -3,13 +3,50 @@
 // --------------------------------------
 // Manejo de carga de secciones + menú activo
 // --------------------------------------
+// Cada sección tiene su propio enlace (#experiencia, #recursos/cap-24-...).
+// loadSection cambia el hash; el listener de hashchange carga el contenido.
+function sectionFromHash() {
+  const h = decodeURIComponent(location.hash.replace(/^#/, '')).trim();
+  return (h ? h : 'inicio') + '.html';
+}
+
 function loadSection(filename) {
+  const name = filename.replace(/\.html$/, '');
+  if (sectionFromHash() === filename) {
+    renderSection(filename);
+  } else {
+    location.hash = name;
+  }
+}
+
+window.addEventListener('hashchange', () => renderSection(sectionFromHash()));
+
+function toggleMobileMenu(forceClose) {
+  const sidebar = document.querySelector('.sidebar-full');
+  const btn = document.querySelector('.menu-toggle');
+  if (!sidebar) return;
+  const open = forceClose ? false : !sidebar.classList.contains('menu-open');
+  sidebar.classList.toggle('menu-open', open);
+  if (btn) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? '✕' : '☰';
+  }
+}
+
+function renderSection(filename) {
+  // Cerrar menú móvil al navegar
+  toggleMobileMenu(true);
+
   // Quitar estado activo de todos
   document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
 
   // Marcar el link correspondiente como activo
   const activeLink = document.querySelector(`.nav a[data-section="${filename}"]`);
-  if (activeLink) activeLink.classList.add('active');
+  if (activeLink) {
+    activeLink.classList.add('active');
+    const parent = activeLink.closest('.nav-parent');
+    if (parent) parent.classList.add('active');
+  }
 
   // Cambiar título sticky
   const sticky = document.getElementById("sticky-title");
@@ -35,7 +72,9 @@ function loadSection(filename) {
     })
     .then(html => {
       content.innerHTML = html;
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const main = document.querySelector('.main-content');
+      if (main) main.scrollTop = 0;
+      window.scrollTo({ top: 0 });
       setTimeout(handleImageLoad, 100);
     })
     .catch(error => {
@@ -161,6 +200,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Cargar la sección inicial
-    loadSection('inicio.html');
+    // Cargar la sección indicada en la URL (o Inicio)
+    renderSection(sectionFromHash());
 });
