@@ -6,7 +6,8 @@
 // Cada sección tiene su propio enlace (#experiencia, #recursos/cap-24-...).
 // loadSection cambia el hash; el listener de hashchange carga el contenido.
 function sectionFromHash() {
-  const h = decodeURIComponent(location.hash.replace(/^#/, '')).trim();
+  let h = decodeURIComponent(location.hash.replace(/^#/, '')).trim();
+  if (h === 'experiencia') h = 'inicio'; // la experiencia ahora está en Inicio
   return (h ? h : 'inicio') + '.html';
 }
 
@@ -207,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Visor de imágenes: clic para ampliar, Esc o clic para cerrar
 // --------------------------------------
 document.addEventListener('click', function (e) {
-  const img = e.target.closest('#content img.zoomable, #content img.project-image, #content .photo-grid img');
+  const img = e.target.closest('#content img.zoomable, #content img.project-image, #content .photo-grid img, #content .dash-card img');
   if (!img) return;
   const box = document.createElement('div');
   box.className = 'lightbox';
