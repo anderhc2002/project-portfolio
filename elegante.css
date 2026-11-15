@@ -633,3 +633,60 @@ footer p { margin: 0; font-size: 0.85rem; color: var(--suave); }
 }
 .topbar .nav-parent.active:not(.open) .nav-toggle::after { transform: translateY(-70%) rotate(45deg); }
 #content > :first-child:not(.hero):not(.section-head) { margin-top: 2.5rem; }
+
+/* ---------- Negritas de color ---------- */
+strong.hl { color: #3b3ff2; font-weight: 600; }
+
+/* ---------- Vista previa de dashboards (abanico) ---------- */
+.dash-preview {
+  display: block;
+  margin: 0.75rem 0 1.5rem;
+  padding: 1.5rem 1rem 1.1rem;
+  border-radius: 16px;
+  background:
+    radial-gradient(120% 90% at 0% 100%, rgba(120, 220, 190, 0.16), transparent 60%),
+    radial-gradient(120% 90% at 100% 0%, rgba(110, 100, 255, 0.14), transparent 60%),
+    #f6f7fb;
+  text-decoration: none;
+  overflow: hidden;
+}
+.dp-stage {
+  position: relative;
+  display: block;
+  height: 210px;
+  perspective: 1200px;
+}
+.dp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46%;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(20, 24, 40, 0.16);
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1);
+}
+.dp { width: 44%; }
+.dp-1 { transform: translate(-108%, -50%) rotateY(24deg) scale(0.82); z-index: 2; }
+.dp-2 { transform: translate(8%, -50%) rotateY(-24deg) scale(0.82); z-index: 2; }
+.dp-3 { transform: translate(-50%, -64%) scale(0.86); z-index: 1; opacity: 0.9; }
+.dp-c { transform: translate(-50%, -46%) scale(1); z-index: 3; }
+.dash-preview:hover .dp-1 { transform: translate(-114%, -50%) rotateY(20deg) scale(0.84); }
+.dash-preview:hover .dp-2 { transform: translate(14%, -50%) rotateY(-20deg) scale(0.84); }
+.dash-preview:hover .dp-c { transform: translate(-50%, -50%) scale(1.03); }
+.dp-cta {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: #1d2028;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.dash-preview { text-align: center; }
+@media (prefers-reduced-motion: reduce) { .dp { transition: none; } }
+@media (max-width: 860px) {
+  .dp-stage { height: 140px; }
+  .dp { width: 50%; }
+}
