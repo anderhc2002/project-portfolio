@@ -1027,26 +1027,12 @@ footer { margin-top: 3.5rem; align-items: center; flex-wrap: wrap; }
 .fig figcaption strong { color: var(--tinta); font-weight: 600; }
 .svg-t { font-family: 'Inter', system-ui, sans-serif; fill: var(--texto); }
 
-.tldr {
-  margin: 1.25rem 0 1.5rem;
-  padding: 1.1rem 1.35rem;
-  background: var(--blanco);
-  border-radius: 12px;
-  box-shadow: var(--sombra);
-}
-.tldr h4 { margin: 0 0 0.45rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--suave); font-weight: 600; }
-.tldr p { margin: 0; font-size: 0.98rem; line-height: 1.6; color: var(--tinta); }
 
 .stat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .stat { padding: 1.25rem 1.35rem; border: 1px solid var(--linea); border-radius: 12px; background: var(--fondo); }
 .stat b { display: block; font-size: 2.1rem; font-weight: 600; letter-spacing: -0.03em; color: var(--tinta); line-height: 1.1; }
 .stat span { display: block; margin-top: 0.35rem; font-size: 0.86rem; color: var(--suave); line-height: 1.45; }
 
-.principle-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; margin: 1.25rem 0; }
-.principle { padding: 1.1rem 1.25rem; border: 1px solid var(--linea); border-radius: 12px; background: var(--blanco); }
-.principle h4 { margin: 0 0 0.35rem; font-size: 0.98rem; color: var(--tinta); font-weight: 600; display: flex; gap: 0.6rem; align-items: baseline; }
-.principle h4 i { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.3rem; color: var(--azul); font-weight: 400; }
-.principle p { margin: 0; font-size: 0.88rem; line-height: 1.55; color: var(--texto); }
 
 .q-table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.92rem; }
 .q-table th { text-align: left; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--suave); font-weight: 600; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--linea); }
@@ -1064,8 +1050,93 @@ footer { margin-top: 3.5rem; align-items: center; flex-wrap: wrap; }
 .stage-marker small { font-size: 0.85rem; color: var(--suave); }
 
 @media (max-width: 860px) {
-  .stat-row, .principle-grid { grid-template-columns: 1fr; }
+  .stat-row { grid-template-columns: 1fr; }
   .q-table td:first-child { white-space: normal; }
   .fig-scroll { overflow-x: auto; }
   .fig-scroll svg { min-width: 640px; }
 }
+
+/* =========================================================
+   Recursos v2: formato editorial (.art) para capítulos
+   Prosa centrada y legible; figuras y tablas a ancho completo.
+   ========================================================= */
+.art { --col: 44rem; margin: 0 auto; }
+.art > * { max-width: var(--col); margin-left: auto; margin-right: auto; }
+.art > .wide, .art > .fig, .art > .table-wrap { max-width: 100%; }
+.art p { font-size: 1.02rem; line-height: 1.78; color: var(--texto); margin: 0 auto 1.1rem; }
+.art p strong, .art li strong { color: var(--tinta); font-weight: 600; }
+.art .lede { font-size: 1.22rem; line-height: 1.65; color: var(--tinta); margin-top: 0.5rem; margin-bottom: 2rem; letter-spacing: -0.01em; }
+.art ul, .art ol { padding-left: 1.2rem; margin: 0 auto 1.25rem; }
+.art li { font-size: 1rem; line-height: 1.7; margin-bottom: 0.45rem; color: var(--texto); }
+
+/* Ideas clave: índice navegable */
+.key {
+  background: var(--blanco); border-radius: var(--radio); box-shadow: var(--sombra);
+  padding: 1.5rem 1.75rem 0.75rem; margin-bottom: 3.5rem !important;
+}
+.key h3 { margin: 0 0 0.9rem; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--suave); font-weight: 600; }
+.key ol { list-style: none; padding: 0; margin: 0; counter-reset: k; }
+.key li { counter-increment: k; display: grid; grid-template-columns: 2.2rem 1fr; gap: 0.25rem; padding: 0.8rem 0; border-top: 1px solid var(--linea); margin: 0; }
+.key li::before { content: counter(k, decimal-leading-zero); font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 1.25rem; color: var(--azul); line-height: 1.3; }
+.key a { color: var(--tinta); text-decoration: none; font-weight: 600; font-size: 0.98rem; }
+.key a:hover { color: var(--azul); }
+.key span { display: block; font-size: 0.9rem; color: var(--suave); line-height: 1.55; margin-top: 0.15rem; }
+
+/* Encabezados de sección */
+.art h2.h {
+  font-size: clamp(1.45rem, 2.4vw, 1.85rem); letter-spacing: -0.025em; color: var(--tinta);
+  font-weight: 600; line-height: 1.2; margin: 4rem auto 1.1rem; scroll-margin-top: 90px; text-wrap: balance;
+}
+.art h2.h small { display: block; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.35rem; color: var(--azul); letter-spacing: 0; margin-bottom: 0.35rem; }
+.art h3.h3 { font-size: 1.08rem; color: var(--tinta); font-weight: 600; margin: 2.2rem auto 0.6rem; letter-spacing: -0.01em; }
+
+/* Frase central */
+.art .pull {
+  font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+  line-height: 1.3; color: var(--tinta); border-left: 2px solid var(--azul); padding: 0.2rem 0 0.2rem 1.25rem; margin: 2rem auto 2rem;
+}
+
+/* Nota de campo */
+.field {
+  background: #f3f6fd; border-radius: 12px; padding: 1.1rem 1.35rem; margin: 1.75rem auto;
+}
+.field b.lbl { display: block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azul); margin-bottom: 0.4rem; font-weight: 600; }
+.field p { font-size: 0.95rem; line-height: 1.65; margin: 0 0 0.5rem; }
+.field p:last-child { margin-bottom: 0; }
+
+/* Contraste en dos columnas */
+.contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--linea); border: 1px solid var(--linea); border-radius: 12px; overflow: hidden; margin: 1.5rem auto 1.75rem; }
+.contrast > div { background: var(--blanco); padding: 1.1rem 1.25rem; }
+.contrast h4 { margin: 0 0 0.5rem; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--suave); font-weight: 600; }
+.contrast p, .contrast li { font-size: 0.93rem; line-height: 1.6; margin: 0 0 0.45rem; }
+.contrast ul { padding-left: 1rem; margin: 0; }
+
+/* Tablas */
+.table-wrap { overflow-x: auto; margin: 1.5rem auto 2rem; background: var(--blanco); border-radius: 12px; box-shadow: var(--sombra); padding: 0.4rem 0.6rem; }
+.table-wrap .q-table { margin: 0; font-size: 0.9rem; min-width: 640px; }
+.q-table td.arrow { color: var(--azul); font-weight: 600; white-space: nowrap; text-align: center; width: 1.5rem; padding-left: 0; padding-right: 0; }
+.q-table td.mine, .q-table th.mine { background: #f6f8fd; }
+.q-table .tag { display: inline-block; font-size: 0.72rem; padding: 0.1rem 0.5rem; border-radius: 999px; background: #eef2fb; color: var(--azul); font-weight: 600; white-space: nowrap; }
+.q-table .tag.red { background: #fff1ee; color: #9a2f1f; }
+.q-table .tag.gray { background: #f1f2f5; color: var(--suave); }
+.art .tnote { font-size: 0.8rem; color: var(--suave); margin: -1.2rem auto 2rem !important; line-height: 1.5 !important; }
+
+/* Referencias externas */
+.refs { border-top: 1px solid var(--linea); margin-top: 3.5rem !important; padding-top: 1.25rem; }
+.refs h4 { font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--suave); margin: 0 0 0.6rem; font-weight: 600; }
+.refs li { font-size: 0.85rem; line-height: 1.55; color: var(--suave); }
+.refs a { color: var(--suave); }
+sup.r { font-size: 0.68rem; color: var(--azul); font-weight: 600; margin-left: 1px; }
+
+.art .fig { margin: 2rem auto 2.25rem; background: var(--blanco); border-radius: var(--radio); box-shadow: var(--sombra); padding: 1.5rem 1.5rem 1.1rem; }
+.art .source-note { max-width: var(--col); }
+
+@media (max-width: 860px) {
+  .art .lede { font-size: 1.08rem; }
+  .art p { font-size: 0.98rem; }
+  .contrast { grid-template-columns: 1fr; }
+  .art .fig { padding: 1rem 0.75rem 0.85rem; }
+  .key { padding: 1.2rem 1.1rem 0.5rem; }
+}
+.table-wrap .q-table td:first-child { white-space: normal; min-width: 11rem; }
+.table-wrap .q-table .tag { white-space: normal; border-radius: 8px; line-height: 1.35; }

@@ -1,53 +1,81 @@
 <!-- ====================================================== -->
-<!-- CAPÍTULO 4 – GOVERNANCE                                -->
-<!-- Síntesis y diagramas de elaboración propia.            -->
+<!-- CAPÍTULO 4 – GOVERNANCE (v2, formato editorial)        -->
+<!-- Texto y diagramas de elaboración propia.               -->
 <!-- ====================================================== -->
 
-<section id="governance">
-  <p class="section-text">
-    La <strong>project governance</strong> es el marco dentro del cual se toman las decisiones del proyecto:
-    quién decide qué, con qué información y en qué momento. Se ubica entre el gobierno corporativo de la empresa
-    y la gestión diaria del proyecto, y se traslapa con ambos. Su objetivo es que las decisiones sean
-    oportunas, las tome la gente correcta y respondan a las necesidades del proyecto.
+<article class="art">
+
+  <p class="lede">
+    La gobernanza es la respuesta institucional a los capítulos 2 y 3. Si quienes deciden pueden no tener el
+    conocimiento para cuestionar, y quienes proponen pueden tener incentivos para maquillar, hace falta una
+    estructura que separe quién decide, quién vigila y quién ejecuta, y que obligue a pasar por puntos de control
+    que nadie pueda saltarse.
   </p>
 
-  <div class="tldr">
-    <h4>En 30 segundos</h4>
-    <p>
-      Una buena gobernanza es lógica, robusta, auditable y repetible. Se apoya en tres pilares (estructura,
-      personas e información), en siete principios y en una serie de gates de go/no-go que el proyecto no puede
-      saltarse.
-    </p>
-  </div>
-</section>
+  <nav class="key" aria-label="Ideas clave del capítulo">
+    <h3>Lo esencial</h3>
+    <ol>
+      <li><div><a href="#" onclick="return goTo('c4-que')">Gobernanza no es gestión</a>
+        <span>Es el marco dentro del cual se gestiona. Vive en la zona donde el gobierno corporativo y la gestión del proyecto se superponen.</span></div></li>
+      <li><div><a href="#" onclick="return goTo('c4-niveles')">Quién decide, quién vigila, quién ejecuta</a>
+        <span>El órgano de supervisión no decide, y el PM no le reporta. Las dos reglas evitan capas inútiles.</span></div></li>
+      <li><div><a href="#" onclick="return goTo('c4-principios')">El principio más incómodo: separar al PM del futuro operador</a>
+        <span>Por qué el dueño del activo no debería gestionar su propio proyecto, y qué otros principios lo acompañan.</span></div></li>
+      <li><div><a href="#" onclick="return goTo('c4-doa')">La Delegation of Authority es el control más concreto</a>
+        <span>Nadie firma lo que el documento no le asigna. Una plantilla para llevarlo a la práctica.</span></div></li>
+      <li><div><a href="#" onclick="return goTo('c4-gates')">Los gates pierden valor si los revisa siempre la misma gente</a>
+        <span>La complacencia en los gates y su remedio: validación externa e independiente.</span></div></li>
+      <li><div><a href="#" onclick="return goTo('c4-fallas')">Cómo falla la gobernanza</a>
+        <span>Fallas del marco y de la cúpula, proyectos con varios dueños y una lectura desde una APP.</span></div></li>
+    </ol>
+  </nav>
 
 
-<!-- ====================================================== -->
-<!-- 1. ESTRUCTURA                                          -->
-<!-- ====================================================== -->
+  <!-- 1 ====================================================== -->
+  <h2 class="h" id="c4-que"><small>01</small>Gobernanza no es gestión</h2>
 
-<section class="card">
-  <h1 class="section-title">Quién decide qué</h1>
-</section>
-
-<section class="card">
-  <h2 class="section-subtitle">Tres pilares</h2>
-  <p class="section-text">
-    Los componentes de la gobernanza (dirección del programa, propiedad y liderazgo del proyecto, funciones de
-    gestión, reporte y divulgación) se sostienen en tres pilares:
+  <p>
+    El libro define la project governance como el marco organizacional dentro del cual se toman las decisiones del
+    proyecto. No es una función de gestión ni una capa adicional de aprobaciones: es el conjunto de reglas que
+    determina <strong>quién puede decidir qué, con qué información y en qué momento</strong>. Su lugar está en la
+    franja donde el gobierno corporativo de la empresa y la gestión del proyecto se superponen, una zona que en
+    la mayoría de organizaciones está mal definida.
   </p>
-  <div class="stat-row">
-    <div class="stat"><b>Estructura</b><span>Un órgano de supervisión eficaz, con pocos niveles, flexible y multidisciplinario.</span></div>
-    <div class="stat"><b>Personas</b><span>La persona correcta al frente del proyecto, con autoridad real.</span></div>
-    <div class="stat"><b>Información</b><span>Reportes periódicos y oportunos a quienes deciden y a los stakeholders.</span></div>
+  <p>
+    Una idea del capítulo ayuda a entender por qué cuesta implementarla: se la ha descrito como "la conducta de la
+    conducta", una autorregulación en la que el regulador forma parte del sistema que regula. Si la empresa no
+    desarrolla una política específica para sus proyectos, simplemente no existe un marco que gobierne sus
+    inversiones de capital; los proyectos quedan sometidos a la estructura jerárquica pensada para operar.
+  </p>
+  <p>
+    El libro también separa dos documentos que suelen confundirse. El <strong>plan de gobernanza</strong> fija
+    mandatos, roles y reglas de aprobación, y permanece más allá de la vida del proyecto. El <strong>PEP</strong>
+    es más detallado, nace durante el desarrollo del proyecto y describe cómo se ejecutará.
+  </p>
+
+  <div class="contrast">
+    <div>
+      <h4>Postura del libro sobre el project charter</h4>
+      <p>Con un buen marco de gobernanza y un PEP completo, un charter separado es burocracia duplicada. Lo que sí
+        respaldan es el documento de una página que firma el equipo en el kickoff, que debería llamarse
+        <em>project vision statement</em>: habla del estándar de desempeño del equipo, no de autorización.</p>
+    </div>
+    <div>
+      <h4>Postura del PMBOK</h4>
+      <p>El charter es el documento que autoriza formalmente el proyecto y da al PM autoridad para usar recursos.
+        La diferencia de fondo: en el esquema del libro, esa autorización ya la dan el AFE y la Delegation of
+        Authority. Ambas posturas coinciden en que la autoridad tiene que estar escrita.</p>
+    </div>
   </div>
 
-  <h2 class="section-subtitle">Tres niveles con funciones distintas</h2>
-  <p class="section-text">
-    El punto clave es que el <strong>órgano de supervisión</strong> (oversight body) no tiene poder de decisión
-    propio: monitorea, valida y asesora. Las decisiones grandes son del nivel ejecutivo, y las del día a día, del
-    project manager. El PM reporta directamente a un ejecutivo, no al órgano de supervisión, para no sumar una
-    capa más.
+
+  <!-- 2 ====================================================== -->
+  <h2 class="h" id="c4-niveles"><small>02</small>Quién decide, quién vigila, quién ejecuta</h2>
+
+  <p>
+    La gobernanza se sostiene en tres pilares: una <strong>estructura</strong> de supervisión eficaz, las
+    <strong>personas</strong> correctas al frente y un flujo de <strong>información</strong> oportuno hacia quienes
+    deciden. En la práctica eso se traduce en tres niveles con funciones que no deben mezclarse:
   </p>
 
   <figure class="fig fig-scroll">
@@ -55,36 +83,27 @@
       <title id="f41t">Niveles de gobernanza del proyecto y tipo de decisión de cada uno</title>
       <desc id="f41d">Nivel ejecutivo: decisiones de go/no-go, financiamiento y cambios mayores de alcance. Órgano de supervisión: monitorea y recomienda, sin poder de decisión, se reúne una o dos veces por trimestre. Project manager y equipo: decisiones diarias de cronograma, presupuesto, forecast y contratistas, con reuniones semanales o quincenales. El PM reporta directamente al ejecutivo; el órgano de supervisión informa al ejecutivo.</desc>
       <g class="svg-t" font-size="12">
-        <!-- columnas de cabecera -->
         <text x="20" y="20" font-size="11" fill="#6b7280" letter-spacing="1">NIVEL</text>
         <text x="300" y="20" font-size="11" fill="#6b7280" letter-spacing="1">QUÉ DECIDE</text>
         <text x="580" y="20" font-size="11" fill="#6b7280" letter-spacing="1">RITMO</text>
-
-        <!-- ejecutivo -->
         <rect x="10" y="34" width="250" height="68" rx="12" fill="#15171c"/>
         <text x="28" y="62" fill="#fff" font-weight="600" font-size="14">Ejecutivo corporativo</text>
-        <text x="28" y="82" fill="#c9ccd3" font-size="11">CEO · VP Operaciones · VP Proyectos</text>
+        <text x="28" y="82" fill="#c9ccd3" font-size="11">Autoridad final de la empresa</text>
         <text x="300" y="60" fill="#15171c">Go / no-go en cada gate, financiamiento,</text>
         <text x="300" y="78" fill="#15171c">cambios mayores de alcance o estrategia</text>
         <text x="580" y="69" fill="#3a404c">En cada gate</text>
-
-        <!-- supervisión -->
         <rect x="10" y="118" width="250" height="68" rx="12" fill="#fff" stroke="#2f6fe4" stroke-width="1.5" stroke-dasharray="6 4"/>
         <text x="28" y="146" fill="#2f6fe4" font-weight="600" font-size="14">Órgano de supervisión</text>
-        <text x="28" y="166" fill="#6b7280" font-size="11">Independiente, idealmente ~3 personas</text>
+        <text x="28" y="166" fill="#6b7280" font-size="11">Ejecutivo, operaciones y proyectos</text>
         <text x="300" y="144" fill="#15171c"><tspan font-weight="600">Nada por sí mismo.</tspan> Monitorea, valida el PEP,</text>
         <text x="300" y="162" fill="#15171c">la base del estimado y el sistema de control</text>
         <text x="580" y="153" fill="#3a404c">1–2 veces por trimestre</text>
-
-        <!-- PM -->
         <rect x="10" y="202" width="250" height="68" rx="12" fill="#2f6fe4"/>
         <text x="28" y="230" fill="#fff" font-weight="600" font-size="14">Project manager y equipo</text>
         <text x="28" y="250" fill="#e3ebfc" font-size="11">Autoridad para ejecutar</text>
-        <text x="300" y="228" fill="#15171c">Cronogramas, cambios de presupuesto dentro</text>
+        <text x="300" y="228" fill="#15171c">Cronogramas, ajustes de presupuesto dentro</text>
         <text x="300" y="246" fill="#15171c">de su autoridad, forecast, contratistas</text>
         <text x="580" y="237" fill="#3a404c">Semanal o quincenal</text>
-
-        <!-- líneas -->
         <path d="M740,236 L740,68 L720,68" fill="none" stroke="#15171c" stroke-width="1.6"/>
         <polygon points="722,63 712,68 722,73" fill="#15171c"/>
         <text x="732" y="160" fill="#15171c" font-size="11" transform="rotate(-90 732 160)" text-anchor="middle">PM reporta al ejecutivo</text>
@@ -92,133 +111,155 @@
         <polygon points="130,106 135,98 140,106" fill="#2f6fe4"/>
         <line x1="135" y1="202" x2="135" y2="186" stroke="#a3a9b4" stroke-width="1.5"/>
         <polygon points="130,190 135,182 140,190" fill="#a3a9b4"/>
-        <line x1="10" y1="285" x2="270" y2="285" stroke="#e7e9ee"/>
-        <text x="10" y="298" fill="#6b7280" font-size="10.5">Flechas verticales: flujo de información y asesoría. La autoridad baja del ejecutivo al PM por la Delegation of Authority.</text>
+        <text x="10" y="292" fill="#6b7280" font-size="10.5">Flechas verticales: información y asesoría. La autoridad baja del ejecutivo al PM mediante la Delegation of Authority.</text>
       </g>
     </svg>
-    <figcaption><strong>Diagrama propio.</strong> Ordena los roles de gobernanza que describe el capítulo según el
-      tipo de decisión y la frecuencia de reunión de cada nivel.</figcaption>
+    <figcaption><strong>Diagrama propio.</strong> Ordena los roles de gobernanza del capítulo según el tipo de
+      decisión y la frecuencia de reunión.</figcaption>
   </figure>
 
-  <h2 class="section-subtitle">Delegation of Authority</h2>
-  <p class="section-text">
-    Documento obligatorio que fija los <strong>niveles de autoridad</strong> para cualquier acción que comprometa
-    al proyecto financiera, comercial o técnicamente: asignaciones de presupuesto, aprobación de pagos, firma de
-    cheques, viáticos, cambios de alcance y cronograma, contrataciones y comunicaciones con prensa. Nadie firma lo
-    que el documento no le asigna.
+  <p>
+    Dos reglas del capítulo explican la forma del diagrama. La primera: el órgano de supervisión <strong>no tiene
+    poder de decisión</strong>. Protege el interés de la empresa, valida antes de que decida el ejecutivo (criterios
+    de diseño, PEP, base del estimado, sistema de control), revisa avances y verifica que las acciones correctivas
+    funcionen. La segunda: el PM <strong>no reporta al órgano de supervisión</strong>, sino directamente a un
+    ejecutivo. Hacerlo agregaría una capa y, según los autores, violaría la buena gobernanza.
   </p>
 
-  <div class="practical-insight">
-    <h4>Una opinión del libro que vale la pena notar</h4>
+  <h3 class="h3">Por qué el comité debe ser pequeño</h3>
+  <p>
+    El libro recomienda un órgano de tres personas: un ejecutivo corporativo (la autoridad), uno de operaciones
+    (el usuario final) y uno de proyectos (quien entrega). Su argumento es que la eficacia de estos comités es
+    inversamente proporcional a su tamaño, y describe el mecanismo: muchos asisten para enterarse, no para
+    aportar; el tiempo no alcanza para que todos hablen, así que quien tiene información valiosa compite con quien
+    tiene interés periférico; y se pierde tiempo nivelando a los que llegan sin contexto. En empresas medianas, el
+    rol puede cumplirlo una sola persona, por ejemplo un vicepresidente de proyectos, si es la persona correcta.
+  </p>
+
+  <div class="field">
+    <b class="lbl">En campo</b>
     <p>
-      Los autores consideran que un <strong>project charter</strong> separado es burocracia duplicada si existe un
-      buen marco de gobernanza y un PEP completo. Lo que sí respaldan es el documento de una página que firma todo
-      el equipo en el kickoff, que para ellos debería llamarse <em>project vision statement</em> y no charter.
-      Es una postura distinta a la del PMBOK, donde el charter es el documento que autoriza el proyecto.
+      La prueba más simple de un comité de proyecto es mirar sus actas: ¿registran decisiones o solo
+      presentaciones? Si cada sesión termina con "se toma conocimiento", el comité está funcionando como canal de
+      información, no como instancia de gobierno.
     </p>
   </div>
-</section>
 
 
-<!-- ====================================================== -->
-<!-- 2. PRINCIPIOS                                          -->
-<!-- ====================================================== -->
+  <!-- 3 ====================================================== -->
+  <h2 class="h" id="c4-principios"><small>03</small>El principio más incómodo: separar al PM del futuro operador</h2>
 
-<section class="card">
-  <h1 class="section-title">Siete principios</h1>
-</section>
+  <p>
+    El capítulo propone siete principios. Varios son intuitivos: un solo responsable por el éxito del proyecto; un
+    PM competente y con autoridad real; una estructura de supervisión que habilite; separar la gestión de
+    stakeholders de la toma de decisiones; separar la gobernanza del proyecto de la corporativa para evitar capas
+    jerárquicas; y reportar a tiempo. El tercero es el que más resistencia genera: <strong>la gestión del proyecto
+    debe ser independiente de quien será dueño del activo</strong>.
+  </p>
+  <p>
+    Muchas empresas encargan el proyecto a la futura operación, suponiendo que así el resultado se ajustará mejor a
+    sus necesidades. Los autores sostienen que, con más frecuencia de lo deseable, el resultado es alcance
+    innecesario y otros objetivos corporativos incumplidos. Las razones que dan:
+  </p>
 
-<section class="card">
-  <div class="principle-grid">
-    <div class="principle">
-      <h4><i>1</i> Un solo responsable</h4>
-      <p>Un único punto de rendición de cuentas por el éxito del proyecto. Sin eso, no hay liderazgo.</p>
+  <div class="contrast">
+    <div>
+      <h4>Cómo piensa la operación</h4>
+      <ul>
+        <li>Optimiza por repetición, buscando un estado estable.</li>
+        <li>Rechaza las interrupciones.</li>
+        <li>Valora la consistencia.</li>
+        <li>Ante la duda, prefiere su comodidad operativa al presupuesto.</li>
+      </ul>
     </div>
-    <div class="principle">
-      <h4><i>2</i> Un PM competente y empoderado</h4>
-      <p>No basta nombrar a alguien: tiene que ser la persona correcta y tener autoridad y recursos para decidir.</p>
-    </div>
-    <div class="principle">
-      <h4><i>3</i> PM independiente del futuro dueño del activo</h4>
-      <p>Si el futuro operador gestiona el proyecto, el alcance tiende a crecer y la contingencia termina
-        financiando sus pedidos. Proyectos y operaciones requieren habilidades distintas.</p>
-    </div>
-    <div class="principle">
-      <h4><i>4</i> Un órgano de supervisión que habilite</h4>
-      <p>Pequeño y ágil: un ejecutivo de operaciones, uno de proyectos y uno corporativo. Su eficacia cae a medida
-        que crece.</p>
-    </div>
-    <div class="principle">
-      <h4><i>5</i> Separar stakeholders de decisiones</h4>
-      <p>Atender a los stakeholders es esencial, pero en otro foro. Si se mezclan, las decisiones se traban en
-        agendas ajenas.</p>
-    </div>
-    <div class="principle">
-      <h4><i>6</i> Gobernanza del proyecto separada de la corporativa</h4>
-      <p>Menos capas jerárquicas y decisiones más rápidas.</p>
-    </div>
-    <div class="principle">
-      <h4><i>7</i> Reportes oportunos</h4>
-      <p>Criterios claros para reportar estado, riesgos y el business case actualizado, con información realista.</p>
+    <div>
+      <h4>Cómo piensa un proyecto</h4>
+      <ul>
+        <li>Trabaja con tareas únicas: la repetición lo mata.</li>
+        <li>Vive en condiciones cambiantes.</li>
+        <li>Necesita flexibilidad.</li>
+        <li>Debe proteger la integridad del presupuesto.</li>
+      </ul>
     </div>
   </div>
 
-  <p class="section-text">
-    Para cumplir el principio 3, los autores recomiendan un <strong>grupo corporativo de proyectos</strong>
-    pequeño, independiente de las divisiones operativas y que reporte al CEO. Según ellos, ese modelo dio mejores
-    resultados que el promedio de la industria en las empresas donde trabajaron.
+  <p>
+    A eso se suman dos riesgos concretos. En proyectos <em>brownfield</em>, cuando la operación tiene un problema,
+    siempre gana prioridad y el proyecto queda descuidado. Y la contingencia, o lo que sobre del presupuesto,
+    corre el riesgo de terminar financiando pedidos de alcance de la operación. La solución que proponen los
+    autores es un <strong>grupo corporativo de proyectos</strong> pequeño, independiente de las divisiones
+    operativas, que reporte al CEO. Su mandato incluye nombrar al PM lo antes posible, revisar el PEP antes de
+    presentarlo, asegurar las aprobaciones, procesar y justificar los cambios de alcance y supervisar el desempeño.
+    Según ellos, ese modelo dio resultados muy superiores al promedio en las empresas donde lo aplicaron.
   </p>
-  <p class="section-text">
-    En proyectos con <strong>varios dueños</strong>, el capítulo suma condiciones: un acuerdo formal de
-    gobernanza entre socios, un único punto de decisión, reglas claras de reparto de riesgos y beneficios, y un
-    mecanismo de resolución de disputas que no ponga en peligro el proyecto.
+
+  <p class="pull">La contingencia es del proyecto. Si se vuelve una bolsa para pedidos de la operación, deja de cubrir riesgos.</p>
+
+
+  <!-- 4 ====================================================== -->
+  <h2 class="h" id="c4-doa"><small>04</small>La Delegation of Authority es el control más concreto</h2>
+
+  <p>
+    De todo el capítulo, la <strong>Delegation of Authority</strong> es lo que más directamente toca el trabajo
+    diario. El libro la considera obligatoria: fija los niveles de autoridad para cualquier acción que comprometa
+    al proyecto en lo financiero, comercial o técnico, y se aplica sin excepción a asignaciones de presupuesto,
+    aprobación de pagos, firma de cheques, viáticos, cambios de alcance y gestión del cronograma. También debería
+    cubrir nombramientos, beneficios, capacitación y comunicación con medios. La regla es simple: nadie aprueba ni
+    firma lo que el documento no le asigna.
   </p>
-</section>
+  <p>
+    El libro no propone un formato. Una matriz como la siguiente permite llevarlo a la práctica:
+  </p>
+
+  <div class="table-wrap">
+    <table class="q-table">
+      <thead><tr><th>Decisión</th><th class="mine">PM</th><th class="mine">Control de proyectos</th><th class="mine">Ejecutivo</th><th class="mine">Supervisión</th></tr></thead>
+      <tbody>
+        <tr><td>Transferencia entre partidas del presupuesto de control</td><td class="mine"><span class="tag">A ≤ umbral</span></td><td class="mine"><span class="tag gray">R</span></td><td class="mine"><span class="tag">A &gt; umbral</span></td><td class="mine"><span class="tag gray">I</span></td></tr>
+        <tr><td>Uso de contingencia</td><td class="mine"><span class="tag">A ≤ umbral</span></td><td class="mine"><span class="tag gray">R</span></td><td class="mine"><span class="tag">A &gt; umbral</span></td><td class="mine"><span class="tag gray">I</span></td></tr>
+        <tr><td>Cambio de alcance</td><td class="mine"><span class="tag gray">R</span></td><td class="mine"><span class="tag gray">R</span> impacto</td><td class="mine"><span class="tag">A</span></td><td class="mine"><span class="tag gray">valida</span></td></tr>
+        <tr><td>Cambio de hitos contractuales</td><td class="mine"><span class="tag gray">R</span></td><td class="mine"><span class="tag gray">R</span> impacto</td><td class="mine"><span class="tag">A</span></td><td class="mine"><span class="tag gray">I</span></td></tr>
+        <tr><td>Aprobación de valorizaciones y pagos</td><td class="mine"><span class="tag">A</span></td><td class="mine"><span class="tag gray">R</span> metrados</td><td class="mine">—</td><td class="mine">—</td></tr>
+        <tr><td>Adjudicación de subcontratos</td><td class="mine"><span class="tag">A ≤ umbral</span></td><td class="mine"><span class="tag gray">R</span></td><td class="mine"><span class="tag">A &gt; umbral</span></td><td class="mine">—</td></tr>
+        <tr><td>Comunicación con medios</td><td class="mine">—</td><td class="mine">—</td><td class="mine"><span class="tag">A</span></td><td class="mine">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tnote">Plantilla ilustrativa propia, no tomada del libro. A = aprueba, R = revisa o recomienda, I = informado. Los umbrales los fija cada organización.</p>
+
+  <p>
+    La matriz deja ver algo útil para un controller: <strong>control de proyectos casi nunca aprueba, pero casi
+    siempre revisa</strong>. Su valor está en que ninguna decisión con impacto económico llegue a quien aprueba
+    sin el impacto en costo y plazo calculado.
+  </p>
 
 
-<!-- ====================================================== -->
-<!-- 3. STAGE GATES                                         -->
-<!-- ====================================================== -->
+  <!-- 5 ====================================================== -->
+  <h2 class="h" id="c4-gates"><small>05</small>Los gates pierden valor si los revisa siempre la misma gente</h2>
 
-<section class="card">
-  <h1 class="section-title">El programa de gates</h1>
-</section>
-
-<section class="card">
-  <h2 class="section-subtitle">Go / no-go en cada etapa</h2>
-  <p class="section-text">
-    La gobernanza funciona como un calendario predefinido de revisiones y decisiones. En cada gate se aprueba,
-    se devuelve para rehacer o se detiene. Con cada etapa, la precisión exigida al estimado de costos se
-    estrecha:
+  <p>
+    La gobernanza funciona como un calendario predefinido de revisiones y decisiones. En cada gate hay tres
+    salidas: aprobar, rehacer y volver a presentar, o detener. Una de las condiciones que el libro pone a la buena
+    gobernanza es que <strong>el proyecto no pueda rodear el gate</strong>. Con cada etapa, la precisión exigida al
+    estimado se estrecha:
   </p>
 
   <figure class="fig fig-scroll">
     <svg viewBox="0 0 760 270" role="img" aria-labelledby="f42t f42d">
       <title id="f42t">Programa de stage gates y precisión del estimado por etapa</title>
       <desc id="f42d">Scoping evaluation con estimado de más 100 a menos 50 por ciento y cronograma de más o menos un año; prefeasibility con más 40 a menos 30 por ciento; feasibility con más o menos 15 por ciento y PEP preliminar; luego ejecución y operaciones. Cada gate tiene tres salidas: aprobar, rehacer y volver a presentar, o detener.</desc>
-      <defs>
-        <marker id="f42a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-          <path d="M0,0 L10,5 L0,10 Z" fill="#15171c"/>
-        </marker>
-      </defs>
       <g class="svg-t" font-size="12" text-anchor="middle">
-        <!-- barras de precisión -->
         <text x="10" y="18" text-anchor="start" font-size="11" fill="#6b7280" letter-spacing="1">PRECISIÓN DEL ESTIMADO DE CAPEX</text>
         <line x1="10" y1="90" x2="510" y2="90" stroke="#e7e9ee"/>
-        <!-- scoping: -50 / +100 -->
         <rect x="70" y="40" width="20" height="75" rx="4" fill="#2f6fe4" opacity="0.25"/>
         <text x="80" y="36" font-size="11" fill="#15171c">+100%</text>
         <text x="80" y="130" font-size="11" fill="#15171c">−50%</text>
-        <!-- prefeas: -30 / +40 -->
         <rect x="235" y="70" width="20" height="35" rx="4" fill="#2f6fe4" opacity="0.5"/>
         <text x="245" y="66" font-size="11" fill="#15171c">+40%</text>
         <text x="245" y="120" font-size="11" fill="#15171c">−30%</text>
-        <!-- feas: ±15 -->
         <rect x="400" y="82" width="20" height="16" rx="4" fill="#2f6fe4"/>
         <text x="410" y="78" font-size="11" fill="#15171c">±15%</text>
         <text x="520" y="94" text-anchor="start" font-size="11" fill="#6b7280">← el rango se estrecha</text>
-
-        <!-- etapas -->
         <rect x="10" y="150" width="140" height="56" rx="10" fill="#15171c"/>
         <text x="80" y="174" fill="#fff" font-weight="600">Scoping</text>
         <text x="80" y="192" fill="#c9ccd3" font-size="11">Concepto · ±1 año</text>
@@ -234,16 +275,8 @@
         <rect x="645" y="150" width="105" height="56" rx="10" fill="#fff" stroke="#15171c"/>
         <text x="697" y="174" fill="#15171c" font-weight="600">Operación</text>
         <text x="697" y="192" fill="#6b7280" font-size="11">Ramp-up</text>
-
-        <!-- gates -->
-        <g fill="#2f6fe4">
-          <circle cx="162" cy="178" r="9"/><circle cx="327" cy="178" r="9"/><circle cx="492" cy="178" r="9"/><circle cx="632" cy="178" r="9"/>
-        </g>
-        <g fill="#fff" font-size="10" font-weight="700">
-          <text x="162" y="182">G</text><text x="327" y="182">G</text><text x="492" y="182">G</text><text x="632" y="182">G</text>
-        </g>
-
-        <!-- leyenda de salidas -->
+        <g fill="#2f6fe4"><circle cx="162" cy="178" r="9"/><circle cx="327" cy="178" r="9"/><circle cx="492" cy="178" r="9"/><circle cx="632" cy="178" r="9"/></g>
+        <g fill="#fff" font-size="10" font-weight="700"><text x="162" y="182">G</text><text x="327" y="182">G</text><text x="492" y="182">G</text><text x="632" y="182">G</text></g>
         <g text-anchor="start" font-size="11.5">
           <circle cx="20" cy="238" r="5" fill="#2f6fe4"/>
           <text x="32" y="242" fill="#15171c">Cada gate:</text>
@@ -253,80 +286,75 @@
           <text x="289" y="243" text-anchor="middle" fill="#3a404c" font-weight="600">Rehacer y volver a presentar</text>
           <rect x="386" y="228" width="136" height="22" rx="11" fill="#fff4f2"/>
           <text x="454" y="243" text-anchor="middle" fill="#9a2f1f" font-weight="600">Detener o postergar</text>
-          <text x="534" y="243" fill="#6b7280">+ auditor externo independiente</text>
+          <text x="534" y="243" fill="#6b7280">+ validación externa independiente</text>
         </g>
       </g>
     </svg>
-    <figcaption><strong>Diagrama propio.</strong> Rangos de precisión tomados del programa de gobernanza descrito en
-      el capítulo; barras no a escala exacta.</figcaption>
+    <figcaption><strong>Diagrama propio.</strong> Rangos tomados del programa de gobernanza del capítulo; barras
+      no a escala exacta. Su equivalencia con las clases de AACE está en el capítulo 1.</figcaption>
   </figure>
 
-  <div class="practical-insight">
-    <h4>Complacencia en los gates</h4>
+  <p>
+    El riesgo que el libro identifica es la <strong>complacencia en los gates</strong>: cuando los mismos revisores
+    evalúan todas las etapas, terminan validando su propio criterio anterior y el gate se vuelve trámite. La
+    solución más simple que proponen es un auditor externo e independiente que valide los datos y reporte
+    directamente a quien aprueba. Encaja con el capítulo 3: una revisión independiente es el mecanismo que
+    desalienta la tergiversación, porque reduce la probabilidad de que un número maquillado pase sin preguntas.
+  </p>
+
+
+  <!-- 6 ====================================================== -->
+  <h2 class="h" id="c4-fallas"><small>06</small>Cómo falla la gobernanza</h2>
+
+  <p>
+    El capítulo distingue dos fuentes de falla. Las del <strong>marco</strong>: un PM sin autoridad suficiente, un
+    órgano de supervisión demasiado grande, saltarse gates para empujar el proyecto a toda costa, la falta de un
+    vínculo claro con las prioridades de la empresa y de métricas de éxito acordadas, recursos insuficientes,
+    falta de realismo sobre las capacidades propias, riesgos externos ignorados mientras se sobrevaloran los
+    conocidos, y mala comunicación. Y las de la <strong>cúpula</strong>, que son más difíciles de corregir desde
+    dentro:
+  </p>
+
+  <ul>
+    <li><strong>Ceguera al riesgo:</strong> el directorio discute con entusiasmo la recompensa y la oportunidad,
+      pero no se ocupa con la misma intensidad de amenazas como la reputación o la licencia para operar.</li>
+    <li><strong>Techo de cristal del riesgo:</strong> la auditoría interna no puede o no se atreve a reportar
+      riesgos que se originan en los niveles más altos de la organización.</li>
+    <li><strong>Incentivos inadecuados</strong>, explícitos o implícitos, y directorios sin la amplitud de
+      competencias o la capacidad para controlar a sus ejecutivos.</li>
+  </ul>
+
+  <h3 class="h3">Cuando el proyecto tiene varios dueños</h3>
+  <p>
+    Para proyectos con más de un dueño, el capítulo agrega principios de la Association for Project Management:
+    un acuerdo formal de gobernanza entre todos; un único punto de decisión; autoridad clara para representar al
+    proyecto; un business case con objetivos, roles e incentivos acordados; un reparto de riesgos y beneficios que
+    considere quién puede influir en cada resultado; reglas para cambios de propiedad; revisión independiente
+    cuando un socio la necesite; y un mecanismo de resolución de disputas que no ponga en riesgo el proyecto.
+  </p>
+
+  <div class="field">
+    <b class="lbl">Lectura desde una APP</b>
     <p>
-      Cuando los mismos revisores evalúan todas las etapas, el gate se vuelve un trámite. La solución que proponen
-      los autores es sencilla: un <strong>auditor externo independiente</strong> que valide la información y
-      reporte directamente a quien aprueba.
+      En una asociación público-privada, buena parte de la gobernanza externa ya viene escrita en el contrato: el
+      concedente, el concesionario y la supervisión tienen roles, canales y plazos definidos. Eso no reemplaza la
+      gobernanza interna de la concesionaria. Los principios del capítulo siguen sirviendo para revisarla: un
+      responsable único, una Delegation of Authority que se cumpla, reportes que lleguen a tiempo para decidir y
+      una contingencia protegida.
     </p>
   </div>
-</section>
 
-
-<!-- ====================================================== -->
-<!-- 4. SEÑALES DE ALERTA Y AUTODIAGNÓSTICO                 -->
-<!-- ====================================================== -->
-
-<section class="card">
-  <h1 class="section-title">Cuándo falla la gobernanza</h1>
-</section>
-
-<section class="card">
-  <div class="cv-two-cols">
-    <div class="cv-col">
-      <h3 class="section-subtitle">Fallas del marco</h3>
-      <ul class="section-list">
-        <li>PM sin autoridad suficiente para decidir.</li>
-        <li>Órgano de supervisión demasiado grande.</li>
-        <li>Saltarse gates para empujar el proyecto a toda costa.</li>
-        <li>Sin vínculo claro con las prioridades de la empresa ni métricas de éxito acordadas.</li>
-        <li>Recursos y capacidades insuficientes, o falta de realismo sobre las propias capacidades.</li>
-        <li>Riesgos externos ignorados y riesgos conocidos sobrevalorados.</li>
-        <li>Mala comunicación interna y poca relación con los stakeholders.</li>
-      </ul>
-    </div>
-    <div class="cv-col">
-      <h3 class="section-subtitle">Fallas en directorio y alta dirección</h3>
-      <ul class="section-list">
-        <li>Directorio con competencias limitadas o que no controla a sus ejecutivos.</li>
-        <li>Incentivos inadecuados, explícitos o implícitos.</li>
-        <li>"Ceguera al riesgo": mirar la recompensa y no la reputación ni la licencia social.</li>
-        <li>"Techo de cristal": auditoría interna que no puede reportar riesgos originados en la cúpula.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h2 class="section-subtitle">Autodiagnóstico rápido</h2>
-  <p class="section-text">Preguntas que uso para evaluar si un proyecto tiene la gobernanza que describe el capítulo:</p>
-  <ol class="section-list">
+  <h3 class="h3">Autodiagnóstico</h3>
+  <p>Siete preguntas para evaluar si un proyecto tiene la gobernanza que describe el capítulo:</p>
+  <ol>
     <li>¿Hay una sola persona que responde por el éxito del proyecto, y todos saben quién es?</li>
     <li>¿Existe una Delegation of Authority vigente y se respeta en pagos, cambios y contratos?</li>
     <li>¿El PM tiene una línea de reporte directa al ejecutivo que decide?</li>
+    <li>¿Las actas del comité registran decisiones, o solo presentaciones?</li>
     <li>¿Las reuniones con stakeholders están separadas de las reuniones de decisión?</li>
-    <li>¿Los reportes tienen formato y contenido definidos, y llegan a tiempo para decidir?</li>
     <li>¿Algún gate lo revisa alguien que no participó en la etapa anterior?</li>
-    <li>¿La contingencia está protegida de pedidos de alcance de operaciones?</li>
+    <li>¿La contingencia está protegida de pedidos de alcance que no son del proyecto?</li>
   </ol>
 
-  <div class="practical-insight">
-    <h4>Cómo lo leo desde una APP</h4>
-    <p>
-      En una asociación público-privada como COAR Centro, parte de la gobernanza viene definida por el contrato:
-      el Estado como contraparte, la supervisión y la concesionaria tienen roles y canales de reporte
-      establecidos. Los principios del capítulo sirven para revisar si dentro de la concesionaria también hay un
-      responsable único, niveles de autoridad claros y reportes que lleguen a tiempo para decidir, no solo para
-      informar.
-    </p>
-  </div>
-</section>
-
-<p class="source-note">Fuente: Hickson, R. J. &amp; Owen, T. L. <em>Project Management for Mining: Handbook for Delivering Project Success</em>, cap. 4. Society for Mining, Metallurgy &amp; Exploration (SME), 2022. Resumen, comentarios y diagramas de elaboración propia.</p>
+  <p class="source-note">Fuente principal: Hickson, R. J. &amp; Owen, T. L. <em>Project Management for Mining: Handbook for Delivering Project Success</em>, cap. 4. SME, 2022. Texto, análisis, diagramas y plantilla de elaboración propia.</p>
+</article>

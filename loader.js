@@ -286,3 +286,10 @@ function decorateSection(filename, content) {
   const note = content.querySelector('.source-note');
   if (note) note.before(nav); else content.append(nav);
 }
+
+// Saltos dentro de un capítulo sin tocar el hash (el hash se usa para rutas)
+function goTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  return false;
+}
