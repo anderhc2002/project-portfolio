@@ -806,3 +806,48 @@ strong.hl { color: #3b3ff2; font-weight: 600; }
 .cta-close { flex-direction: column; align-items: center; text-align: center; padding: 2.25rem 2rem; }
 .cta-close-actions { justify-content: center; max-width: none; }
 @media (max-width: 860px) { .cta-close { align-items: center; } .cta-close-actions { justify-content: center; } }
+
+/* ---------- Experiencia en bloques con ícono ---------- */
+.feat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.feat {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--linea);
+  border-radius: 12px;
+  background: #fbfbfd;
+}
+.feat-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(59, 63, 242, 0.08);
+  color: #3b3ff2;
+}
+.feat-icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.feat h4 { margin: 0.1rem 0 0.25rem; font-size: 0.98rem; font-weight: 600; letter-spacing: -0.01em; color: var(--tinta); }
+.feat p { margin: 0; font-size: 0.9rem; line-height: 1.55; color: var(--suave); }
+.exp-card .dash-preview { margin: 1.25rem 0 0; }
+.exp-card .feat-grid + .gallery { margin-top: 1.5rem; }
+
+/* ---------- Títulos de sección más contenidos ---------- */
+.section-head { margin: 2.75rem auto 1.25rem; }
+.section-head h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); }
+.section-head:first-child { margin-top: 2.5rem; }
+.hero + .section-head { margin-top: 1.75rem; }
+.hero-role { max-width: 60ch; }
+.chips { margin-top: 0.8rem; }
+
+@media (max-width: 860px) {
+  .feat-grid { grid-template-columns: 1fr; }
+  .section-head { margin: 2.25rem auto 1rem; }
+}
