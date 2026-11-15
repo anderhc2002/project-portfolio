@@ -734,3 +734,19 @@ strong.hl { color: #3b3ff2; font-weight: 600; }
   .gallery img { height: 170px; }
   .exp-card .dp-stage { height: 140px; }
 }
+
+/* ---------- Cabecera compacta (nombre + cifras) ---------- */
+.hero { padding: 2.25rem 0 0.25rem; }
+.hero-title { font-size: clamp(2rem, 3.6vw, 2.6rem); margin-bottom: 0.4rem; }
+.hero-role { font-size: 0.98rem; }
+.stats { margin: 1.25rem 0 0; padding: 1rem 0; gap: 1.5rem; }
+.stats dt { font-size: clamp(1.7rem, 2.6vw, 2.1rem); }
+.stats dd { margin-top: 0.35rem; font-size: 0.83rem; max-width: 30ch; }
+.stats + .section-head { margin-top: 2.25rem; }
+@media (max-width: 860px) {
+  .hero { padding-top: 1.75rem; }
+  .stats { row-gap: 1.25rem; }
+}
+.stats { margin-top: 0.9rem; padding: 0.5rem 0; }
+.stats dd { max-width: 32ch; }
+.stats + .section-head { margin-top: 1.6rem; margin-bottom: 1.75rem; }
