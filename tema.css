@@ -577,3 +577,74 @@ footer p { font-size: 0.85rem; color: var(--texto-suave); margin: 0; }
 @media (max-width: 900px) {
   .dash-grid, .photo-grid-2 { grid-template-columns: 1fr; }
 }
+
+/* ---------- Ajustes nov 2026 (3): banner delgado y formación ordenada ---------- */
+.hero {
+  grid-template-columns: 1fr;
+  padding: 1.75rem 2.25rem 0;
+}
+.hero-text {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "name actions" "role actions" "lead actions";
+  column-gap: 2rem;
+  align-items: center;
+}
+.hero-name { grid-area: name; font-size: clamp(2rem, 3.4vw, 2.6rem); margin: 0 0 0.35rem; }
+.hero-role { grid-area: role; font-size: 0.95rem; margin: 0 0 0.6rem; }
+.hero-lead { grid-area: lead; font-size: 1rem; margin: 0; max-width: 62ch; }
+.hero-actions { grid-area: actions; flex-direction: column; align-items: stretch; }
+.hero-actions .btn { justify-content: center; padding: 0.55rem 1.1rem; font-size: 0.9rem; }
+.hero-curve { height: 46px; margin: 1.25rem -2.25rem 0; width: calc(100% + 4.5rem); }
+.hero-curve-legend { bottom: 0.45rem; right: 2.25rem; font-size: 0.75rem; }
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0.5rem 0 2rem;
+}
+.edu-item {
+  border: 1px solid var(--linea);
+  border-left: 3px solid var(--acero);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+}
+.edu-item h3 { font-size: 1.05rem; font-weight: 700; color: var(--tinta); margin: 0.15rem 0 0.3rem; }
+.edu-item p { margin: 0; font-size: 0.93rem; color: var(--texto); }
+.edu-item .edu-years { font-size: 0.85rem; color: var(--texto-suave); font-variant-numeric: tabular-nums; }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.9fr;
+  gap: 2rem;
+  border-top: 1px solid var(--linea);
+  padding-top: 1.5rem;
+}
+.skills-grid .competence-category { margin-top: 0; }
+.skill-list { list-style: none; padding: 0; margin: 0; }
+.skill-list li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #eaeef3;
+  font-size: 0.95rem;
+  color: var(--texto);
+}
+.skill-list li:last-child { border-bottom: none; }
+.skill-list span { font-weight: 600; color: var(--tinta); }
+.skills-grid > div:nth-child(2) .skill-list span { font-weight: 500; color: var(--texto); }
+.skill-list em { font-style: normal; font-size: 0.85rem; color: var(--texto-suave); }
+
+@media (max-width: 900px) {
+  .hero-text { grid-template-columns: 1fr; grid-template-areas: "name" "role" "lead" "actions"; }
+  .hero-actions { flex-direction: row; margin-top: 1rem; }
+  .skills-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+@media (max-width: 768px) {
+  .hero { padding: 1.5rem 1.25rem 0; }
+  .hero-text { grid-row: auto; }
+  .hero-curve { margin: 1rem -1.25rem 0; width: calc(100% + 2.5rem); height: 40px; grid-row: auto; }
+  .hero-curve-legend { right: 1.25rem; }
+  .edu-grid { grid-template-columns: 1fr; }
+}
