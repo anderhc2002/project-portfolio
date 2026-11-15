@@ -750,3 +750,59 @@ strong.hl { color: #3b3ff2; font-weight: 600; }
 .stats { margin-top: 0.9rem; padding: 0.5rem 0; }
 .stats dd { max-width: 32ch; }
 .stats + .section-head { margin-top: 1.6rem; margin-bottom: 1.75rem; }
+
+/* ---------- Optimización para reclutadores ---------- */
+.hero-role { max-width: 62ch; margin: 0 auto; line-height: 1.55; }
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.9rem auto 0;
+  padding: 0;
+  max-width: 720px;
+}
+.chips li {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--linea);
+  border-radius: 999px;
+  background: var(--blanco);
+  font-size: 0.8rem;
+  color: var(--tinta);
+}
+.stats dt small { font-size: 0.62em; color: var(--tenue); margin-right: 0.12em; font-weight: 400; letter-spacing: 0; }
+
+.exp-company {
+  margin: 0 0 0.2rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #3b3ff2;
+}
+
+.cta-close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 2rem 2.5rem;
+  background:
+    radial-gradient(120% 120% at 0% 100%, rgba(120, 220, 190, 0.14), transparent 60%),
+    radial-gradient(120% 120% at 100% 0%, rgba(110, 100, 255, 0.12), transparent 60%),
+    #fff;
+}
+.cta-close h2 { font-size: 1.6rem; font-weight: 500; letter-spacing: -0.03em; color: var(--tinta); margin: 0 0 0.3rem; }
+.cta-close h2 em { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 1.1em; }
+.cta-close p { margin: 0; color: var(--suave); font-size: 0.95rem; }
+.cta-close-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem; max-width: 520px; }
+.cta-close-actions .pill { font-size: 0.86rem; padding: 0.5rem 1rem; }
+@media (max-width: 860px) {
+  .cta-close { flex-direction: column; align-items: flex-start; padding: 1.5rem 1.25rem; }
+  .cta-close-actions { justify-content: flex-start; }
+  .chips li { font-size: 0.76rem; }
+}
+.stats dt small { text-transform: none; font-variant: normal; }
+.cta-close { flex-direction: column; align-items: center; text-align: center; padding: 2.25rem 2rem; }
+.cta-close-actions { justify-content: center; max-width: none; }
+@media (max-width: 860px) { .cta-close { align-items: center; } .cta-close-actions { justify-content: center; } }
