@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Visor de imágenes: clic para ampliar, Esc o clic para cerrar
 // --------------------------------------
 document.addEventListener('click', function (e) {
-  const img = e.target.closest('#content img.zoomable, #content img.project-image, #content .photo-grid img, #content .dash-card img');
+  const img = e.target.closest('#content img.zoomable, #content img.project-image, #content .photo-grid img, #content .gallery img, #content .dash-card img');
   if (!img) return;
   const box = document.createElement('div');
   box.className = 'lightbox';
