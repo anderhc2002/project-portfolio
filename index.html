@@ -4,38 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ander Huallpa · Control de Proyectos</title>
-    <meta name="theme-color" content="#1c4277">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Portafolio de Ander Huallpa: control de proyectos y PMO en construcción (EVM, Power BI, Primavera P6)">
-    <meta property="og:title" content="Ander Huallpa - Bachiller de Ingeniería Civil">
+    <meta property="og:title" content="Ander Huallpa · Control de Proyectos">
     <meta property="og:description" content="Portafolio de Ander Huallpa: control de proyectos y PMO en construcción (EVM, Power BI, Primavera P6)">
+    <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="tema.css">
-    <link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="elegante.css">
 </head>
 <body>
     <div class="layout">
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar-full">
-            <div class="sidebar-header-compact">
-                <a href="https://linkedin.com/in/anderhc2002/" target="_blank" rel="noopener" class="avatar-link">
-                    <img src="assets/img/perfil.jpg" alt="Ander Huallpa en obra" class="avatar-small avatar-photo">
-                </a>
-                <div class="header-text">
-                    <h2 class="sidebar-title">Ander Huallpa</h2>
-                    <h3 class="sidebar-subtitle">Control de proyectos y PMO</h3>
-                </div>
-                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMobileMenu()">☰</button>
-            </div>
+        <!-- BARRA SUPERIOR -->
+        <header class="topbar">
+            <a class="brand" href="#inicio" onclick="loadSection('inicio.html'); return false;">
+                <img src="assets/img/perfil.jpg" alt="" class="brand-photo">
+                <span>Ander Huallpa</span>
+            </a>
 
-            <nav class="nav" id="main-nav">
+            <nav class="nav" id="main-nav" aria-label="Secciones">
                 <ul>
-                    <li><a href="#inicio" data-section="inicio.html" onclick="loadSection('inicio.html'); return false;"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a></li>
-                    <li><a href="#dashboards" data-section="dashboards.html" onclick="loadSection('dashboards.html'); return false;"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Dashboards</a></li>
-
-                    <!-- RECURSOS (notas de estudio del libro) -->
+                    <li><a href="#inicio" data-section="inicio.html" onclick="loadSection('inicio.html'); return false;">Inicio</a></li>
+                    <li><a href="#dashboards" data-section="dashboards.html" onclick="loadSection('dashboards.html'); return false;">Dashboards</a></li>
                     <li class="nav-parent">
-                        <a href="#recursos" class="nav-toggle"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4zM20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg>Recursos</a>
+                        <a href="#recursos" class="nav-toggle" aria-haspopup="true">Recursos</a>
                         <ul class="nav-submenu">
                             <li><a href="#recursos" data-section="recursos.html" onclick="loadSection('recursos.html'); return false;">Todos los recursos</a></li>
                             <li><a href="#recursos/cap-05-scoping-evaluation" data-section="recursos/cap-05-scoping-evaluation.html" onclick="loadSection('recursos/cap-05-scoping-evaluation.html'); return false;">Cap. 5, Scoping Evaluation</a></li>
@@ -46,8 +38,7 @@
                             <li><a href="#recursos/cap-27-document-control" data-section="recursos/cap-27-document-control.html" onclick="loadSection('recursos/cap-27-document-control.html'); return false;">Cap. 27, Document Control</a></li>
                         </ul>
                     </li>
-
-                    <li><a href="#contacto" data-section="contacto.html" onclick="loadSection('contacto.html'); return false;"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>Contacto</a></li>
+                    <li><a href="#contacto" data-section="contacto.html" onclick="loadSection('contacto.html'); return false;">Contacto</a></li>
 
                     <!-- OCULTO DE MOMENTO:
                          · Fases 4–7 (Approval, Execution, Completion, Operations): secciones/approval, execution, completion, operations
@@ -55,20 +46,22 @@
                          Los archivos siguen en el repositorio; para mostrarlos, agregar sus enlaces aquí. -->
                 </ul>
             </nav>
-        </aside>
 
-        <!-- CONTENIDO PRINCIPAL -->
-        <main class="main-content">
-            <div id="sticky-title" class="sticky-title"></div>
-
-            <div class="progress-container">
-                <div class="progress-bar" id="myBar"></div>
+            <div class="topbar-actions">
+                <a class="pill pill-dark" href="assets/cv/CV-Ander-Huallpa.pdf" target="_blank" rel="noopener">Descargar CV</a>
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMobileMenu()">☰</button>
             </div>
+        </header>
+
+        <main class="main-content">
+            <div id="sticky-title" class="sticky-title" hidden></div>
+            <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
 
             <div id="content"></div>
 
             <footer>
-                <p>© 2026 Ander Huallpa. Ingeniería civil, control de proyectos y PMO.</p>
+                <p>© 2026 Ander Huallpa</p>
+                <p>Ingeniería civil, control de proyectos y PMO</p>
             </footer>
         </main>
     </div>
@@ -76,9 +69,3 @@
     <script src="loader.js"></script>
 </body>
 </html>
-
-
-
-
-
-

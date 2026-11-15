@@ -23,7 +23,7 @@ function loadSection(filename) {
 window.addEventListener('hashchange', () => renderSection(sectionFromHash()));
 
 function toggleMobileMenu(forceClose) {
-  const sidebar = document.querySelector('.sidebar-full');
+  const sidebar = document.querySelector('.topbar');
   const btn = document.querySelector('.menu-toggle');
   if (!sidebar) return;
   const open = forceClose ? false : !sidebar.classList.contains('menu-open');
@@ -35,14 +35,16 @@ function toggleMobileMenu(forceClose) {
 }
 
 function renderSection(filename) {
-  // Cerrar menú móvil al navegar
+  // Cerrar menú móvil y desplegables al navegar
   toggleMobileMenu(true);
+  document.querySelectorAll('.nav-parent.open').forEach(p => p.classList.remove('open'));
 
   // Quitar estado activo de todos
   document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
 
   // Marcar el link correspondiente como activo
   const activeLink = document.querySelector(`.nav a[data-section="${filename}"]`);
+  document.querySelectorAll('.nav-parent').forEach(p => p.classList.remove('active'));
   if (activeLink) {
     activeLink.classList.add('active');
     const parent = activeLink.closest('.nav-parent');
@@ -125,9 +127,9 @@ function handleImageLoad() {
 // --------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   // Detectar scroll en el contenedor principal
-  const mainContent = document.querySelector('.main-content');
+  const mainContent = document.documentElement;
   if (mainContent) {
-    mainContent.onscroll = function() {
+    window.onscroll = function() {
       var winScroll = mainContent.scrollTop;
       var height = mainContent.scrollHeight - mainContent.clientHeight;
       // Evitar division por 0
@@ -197,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             e.stopPropagation();
             const parent = this.parentElement;
-            parent.classList.toggle('active');
+            parent.classList.toggle('open');
         });
     });
 
@@ -225,4 +227,11 @@ document.addEventListener('click', function (e) {
   document.addEventListener('keydown', onKey);
   document.body.appendChild(box);
   box.querySelector('.lightbox-close').focus();
+});
+
+// Cerrar el desplegable de Recursos al hacer clic fuera
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.nav-parent')) {
+    document.querySelectorAll('.nav-parent.open').forEach(p => p.classList.remove('open'));
+  }
 });
