@@ -851,3 +851,145 @@ strong.hl { color: #3b3ff2; font-weight: 600; }
   .feat-grid { grid-template-columns: 1fr; }
   .section-head { margin: 2.25rem auto 1rem; }
 }
+
+/* =========================================================
+   Revisión integral (15 nov 2026)
+   ========================================================= */
+/* Cabecera */
+.hero-role { max-width: 84ch; text-wrap: balance; }
+.section-head h2, .cta-close h2 { text-wrap: balance; }
+
+/* Marhnos: vista previa de dashboards + fotos en una fila */
+.media-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--linea);
+  align-items: stretch;
+}
+.media-row .dash-preview {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 0.75rem 1.1rem;
+}
+.media-row .dp-stage { width: 100%; max-width: none; height: 250px; margin: 0; }
+.media-row .dp { width: 60%; }
+.media-row .dp-1 { transform: translate(-88%, -50%) rotateY(22deg) scale(0.78); }
+.media-row .dp-2 { transform: translate(-12%, -50%) rotateY(-22deg) scale(0.78); }
+.media-row .dash-preview:hover .dp-1 { transform: translate(-92%, -50%) rotateY(18deg) scale(0.8); }
+.media-row .dash-preview:hover .dp-2 { transform: translate(-8%, -50%) rotateY(-18deg) scale(0.8); }
+.media-row .gallery {
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  border: none;
+  gap: 0.9rem 0.9rem;
+}
+.media-row .gallery img { height: 148px; }
+.media-row .gallery figcaption { margin-top: 0.35rem; font-size: 0.78rem; }
+
+/* Aceros: galería más baja */
+.gallery-aceros { margin-top: 1.25rem; padding-top: 1.25rem; }
+.gallery-aceros img { height: 200px; }
+
+/* Bloques de logros un poco más compactos */
+.feat { padding: 1rem 1.1rem; }
+.exp-card { padding: 2rem 2.25rem; }
+.exp-card .experience-head { padding-bottom: 1.1rem; margin-bottom: 1.25rem; }
+
+/* Formación: tres tarjetas equilibradas */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1.15fr;
+  gap: 1.25rem;
+}
+.profile-grid .card { margin: 0; padding: 1.6rem 1.75rem; }
+.profile-grid .competence-category { color: #3b3ff2; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; }
+.profile-grid .competence-category.sub { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--linea); }
+.skill-list.inline { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.skill-list.inline li { border: none; padding: 0.3rem 0 0; }
+.skill-list.plain-items span { font-weight: 400; color: var(--texto); }
+.skill-list em strong.hl { font-size: 0.84rem; }
+
+/* Cierre */
+.cta-close { margin-top: 2.25rem; }
+
+/* Pie con enlaces */
+footer { margin-top: 3.5rem; align-items: center; flex-wrap: wrap; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; }
+.footer-links a { color: var(--texto); text-decoration: none; border-bottom: 1px solid transparent; }
+.footer-links a:hover { color: var(--tinta); border-bottom-color: var(--tenue); }
+
+/* Dashboards: tarjetas de igual altura y texto alineado */
+.dash-card { display: flex; flex-direction: column; }
+.dash-card figure { aspect-ratio: 16 / 9.3; }
+.dash-card figure img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+/* Capítulos de Recursos */
+.chapter-head { margin-top: 2.5rem !important; }
+.crumbs { margin: 0 0 0.6rem; font-size: 0.85rem; color: var(--suave); }
+.crumbs a { color: #3b3ff2; text-decoration: none; font-weight: 500; }
+.crumbs span { margin: 0 0.5rem; color: var(--tenue); }
+.chapter > section:not(.card) > .section-text:first-child,
+.chapter > section > .section-text { max-width: none; }
+.chapter .section-subtitle { letter-spacing: -0.02em; color: var(--tinta); }
+.chapter-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.chapter-nav a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  text-decoration: none;
+  color: var(--tinta);
+  font-weight: 500;
+  transition: box-shadow .2s;
+}
+.chapter-nav a:hover { box-shadow: var(--sombra-hover); }
+.chapter-nav a.next { text-align: right; }
+.chapter-nav small { font-size: 0.8rem; font-weight: 400; color: var(--suave); }
+
+@media (max-width: 1000px) {
+  .profile-grid { grid-template-columns: 1fr; }
+  .media-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .topbar-actions .pill { display: inline-flex; padding: 0.45rem 0.9rem; font-size: 0.85rem; }
+  .cv-long { display: none; }
+  .media-row .dp-stage { height: 170px; }
+  .media-row .gallery img { height: 120px; }
+  .gallery-aceros { grid-template-columns: 1fr 1fr; }
+  .gallery-aceros .g-portrait { display: none; }
+  .gallery-aceros img { height: 130px; }
+  .exp-card { padding: 1.4rem 1.15rem; }
+  .feat-grid { gap: 0.6rem; }
+  .feat { padding: 0.85rem 0.9rem; gap: 0.75rem; }
+  .feat-icon { width: 32px; height: 32px; }
+  .feat p { font-size: 0.86rem; }
+  .chapter-nav { grid-template-columns: 1fr; }
+  .chapter-nav a.next { text-align: left; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+.cv-long { margin-right: 0.3em; }
+.dash-card figure img { object-fit: contain; }
+.media-row .dp-1 { transform: translate(-99%, -50%) rotateY(22deg) scale(0.78); }
+.media-row .dp-2 { transform: translate(-1%, -50%) rotateY(-22deg) scale(0.78); }
+.media-row .dash-preview:hover .dp-1 { transform: translate(-103%, -50%) rotateY(18deg) scale(0.8); }
+.media-row .dash-preview:hover .dp-2 { transform: translate(3%, -50%) rotateY(-18deg) scale(0.8); }
+.media-row .dp { width: 56%; }
+.media-row .dp-1 { transform: translate(-93%, -50%) rotateY(22deg) scale(0.78); }
+.media-row .dp-2 { transform: translate(-7%, -50%) rotateY(-22deg) scale(0.78); }
+.media-row .dash-preview:hover .dp-1 { transform: translate(-96%, -50%) rotateY(18deg) scale(0.8); }
+.media-row .dash-preview:hover .dp-2 { transform: translate(-4%, -50%) rotateY(-18deg) scale(0.8); }

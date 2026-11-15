@@ -58,6 +58,7 @@ function renderSection(filename) {
   }
 
   const content = document.getElementById('content');
+  content.classList.remove('chapter');
   content.innerHTML = `
     <div class="loading">
       <p>Cargando contenido...</p>
@@ -75,6 +76,7 @@ function renderSection(filename) {
     })
     .then(html => {
       content.innerHTML = html;
+      decorateSection(filename, content);
       const main = document.querySelector('.main-content');
       if (main) main.scrollTop = 0;
       window.scrollTo({ top: 0 });
@@ -235,3 +237,48 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.nav-parent.open').forEach(p => p.classList.remove('open'));
   }
 });
+
+// --------------------------------------
+// Capítulos de Recursos: cabecera, migas y anterior/siguiente
+// --------------------------------------
+const CHAPTERS = [
+  { file: 'recursos/cap-05-scoping-evaluation.html',  stage: 'Opportunity', num: 5,  title: 'Scoping Evaluation' },
+  { file: 'recursos/cap-06-management-review.html',   stage: 'Opportunity', num: 6,  title: 'Management Review' },
+  { file: 'recursos/cap-07-prefeasibility-study.html', stage: 'Viability',  num: 7,  title: 'Prefeasibility Study' },
+  { file: 'recursos/cap-08-feasibility-study.html',   stage: 'Viability',   num: 8,  title: 'Feasibility Study' },
+  { file: 'recursos/cap-24-project-controls.html',    stage: 'Planning',    num: 24, title: 'Project Controls' },
+  { file: 'recursos/cap-27-document-control.html',    stage: 'Planning',    num: 27, title: 'Document Management and Document Control' }
+];
+const PAGE_TITLES = { 'inicio.html': '', 'dashboards.html': 'Dashboards', 'recursos.html': 'Recursos', 'contacto.html': 'Contacto' };
+const SITE_TITLE = 'Ander Huallpa | Control de Proyectos y PMO en construcción';
+
+function chapterLink(ch, label) {
+  return `<a href="#${ch.file.replace(/\.html$/, '')}" onclick="loadSection('${ch.file}'); return false;">
+            <small>${label}</small><span>Cap. ${ch.num}, ${ch.title}</span></a>`;
+}
+
+function decorateSection(filename, content) {
+  const i = CHAPTERS.findIndex(c => c.file === filename);
+  if (i === -1) {
+    const t = PAGE_TITLES[filename];
+    document.title = t ? t + ' | Ander Huallpa' : SITE_TITLE;
+    return;
+  }
+  const ch = CHAPTERS[i];
+  document.title = `Cap. ${ch.num}, ${ch.title} | Ander Huallpa`;
+  content.classList.add('chapter');
+  const head = document.createElement('header');
+  head.className = 'section-head chapter-head';
+  head.innerHTML = `
+    <p class="crumbs"><a href="#recursos" onclick="loadSection('recursos.html'); return false;">Recursos</a><span>/</span>${ch.stage}<span>/</span>Capítulo ${ch.num}</p>
+    <h2>${ch.title}</h2>`;
+  content.prepend(head);
+  const nav = document.createElement('nav');
+  nav.className = 'chapter-nav';
+  nav.setAttribute('aria-label', 'Otros capítulos');
+  nav.innerHTML =
+    (i > 0 ? chapterLink(CHAPTERS[i - 1], 'Anterior') : '<span></span>') +
+    (i < CHAPTERS.length - 1 ? chapterLink(CHAPTERS[i + 1], 'Siguiente').replace('<a ', '<a class="next" ') : '<span></span>');
+  const note = content.querySelector('.source-note');
+  if (note) note.before(nav); else content.append(nav);
+}
