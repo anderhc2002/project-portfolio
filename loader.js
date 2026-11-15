@@ -242,6 +242,10 @@ document.addEventListener('click', function (e) {
 // Capítulos de Recursos: cabecera, migas y anterior/siguiente
 // --------------------------------------
 const CHAPTERS = [
+  { file: 'recursos/cap-01-introduction.html',        stage: 'Opportunity', num: 1,  title: 'Introduction' },
+  { file: 'recursos/cap-02-knowledge.html',           stage: 'Opportunity', num: 2,  title: 'Knowledge' },
+  { file: 'recursos/cap-03-ethics.html',              stage: 'Opportunity', num: 3,  title: 'Ethics' },
+  { file: 'recursos/cap-04-governance.html',          stage: 'Opportunity', num: 4,  title: 'Governance' },
   { file: 'recursos/cap-05-scoping-evaluation.html',  stage: 'Opportunity', num: 5,  title: 'Scoping Evaluation' },
   { file: 'recursos/cap-06-management-review.html',   stage: 'Opportunity', num: 6,  title: 'Management Review' },
   { file: 'recursos/cap-07-prefeasibility-study.html', stage: 'Viability',  num: 7,  title: 'Prefeasibility Study' },

@@ -514,7 +514,7 @@ em { font-style: italic; }
   text-decoration: none;
   transition: padding-left 0.15s ease, border-color 0.15s ease;
 }
-.stage-chapters a:last-child { border-bottom: none; }
+.stage-chapters > :last-child { border-bottom: none; }
 .chapter-row:hover { padding-left: 0.75rem; border-color: var(--azul); }
 .chapter-num {
   font-family: 'Instrument Serif', Georgia, serif;
@@ -1016,3 +1016,56 @@ footer { margin-top: 3.5rem; align-items: center; flex-wrap: wrap; }
 .media-row .dp-2 { transform: translate(-7%, -50%) rotateY(-22deg) scale(0.78); }
 .media-row .dash-preview:hover .dp-1 { transform: translate(-96%, -50%) rotateY(18deg) scale(0.8); }
 .media-row .dash-preview:hover .dp-2 { transform: translate(-4%, -50%) rotateY(-18deg) scale(0.8); }
+
+/* =========================================================
+   Recursos: componentes de los capítulos 1–4 (nov 2026)
+   Diagramas propios en SVG, cifras, principios y tablas.
+   ========================================================= */
+.fig { margin: 1.5rem 0 1.75rem; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig figcaption { margin-top: 0.75rem; font-size: 0.82rem; color: var(--suave); line-height: 1.5; }
+.fig figcaption strong { color: var(--tinta); font-weight: 600; }
+.svg-t { font-family: 'Inter', system-ui, sans-serif; fill: var(--texto); }
+
+.tldr {
+  margin: 1.25rem 0 1.5rem;
+  padding: 1.1rem 1.35rem;
+  background: var(--blanco);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+}
+.tldr h4 { margin: 0 0 0.45rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--suave); font-weight: 600; }
+.tldr p { margin: 0; font-size: 0.98rem; line-height: 1.6; color: var(--tinta); }
+
+.stat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.stat { padding: 1.25rem 1.35rem; border: 1px solid var(--linea); border-radius: 12px; background: var(--fondo); }
+.stat b { display: block; font-size: 2.1rem; font-weight: 600; letter-spacing: -0.03em; color: var(--tinta); line-height: 1.1; }
+.stat span { display: block; margin-top: 0.35rem; font-size: 0.86rem; color: var(--suave); line-height: 1.45; }
+
+.principle-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; margin: 1.25rem 0; }
+.principle { padding: 1.1rem 1.25rem; border: 1px solid var(--linea); border-radius: 12px; background: var(--blanco); }
+.principle h4 { margin: 0 0 0.35rem; font-size: 0.98rem; color: var(--tinta); font-weight: 600; display: flex; gap: 0.6rem; align-items: baseline; }
+.principle h4 i { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.3rem; color: var(--azul); font-weight: 400; }
+.principle p { margin: 0; font-size: 0.88rem; line-height: 1.55; color: var(--texto); }
+
+.q-table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.92rem; }
+.q-table th { text-align: left; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--suave); font-weight: 600; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--linea); }
+.q-table td { padding: 0.75rem; border-bottom: 1px solid var(--linea); vertical-align: top; line-height: 1.5; }
+.q-table td:first-child { color: var(--tinta); font-weight: 500; white-space: nowrap; }
+.q-table tr:last-child td { border-bottom: none; }
+
+/* Capítulos aún no publicados en la ruta de Recursos */
+.chapter-row.pending { cursor: default; }
+.chapter-row.pending .chapter-name { color: var(--tenue); }
+.chapter-row.pending .chapter-num { color: var(--tenue); }
+.chapter-row.pending:hover { padding-left: 0.35rem; border-color: var(--linea); }
+.chapter-row.pending:hover .chapter-name { color: var(--tenue); }
+.chapter-row .soon { margin-left: auto; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--tenue); }
+.stage-marker small { font-size: 0.85rem; color: var(--suave); }
+
+@media (max-width: 860px) {
+  .stat-row, .principle-grid { grid-template-columns: 1fr; }
+  .q-table td:first-child { white-space: normal; }
+  .fig-scroll { overflow-x: auto; }
+  .fig-scroll svg { min-width: 640px; }
+}
