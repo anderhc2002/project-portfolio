@@ -468,42 +468,63 @@ em { font-style: italic; }
   line-height: 1.55;
 }
 
-/* ---------- Recursos (tarjetas con ícono a la derecha) ---------- */
-.plain > .competence-category { margin: 2.25rem 0 0.9rem; font-size: 1.05rem; color: var(--suave); font-weight: 500; }
-.cta-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin: 0; }
-.cta-stage-button,
-.cta-stage-button:hover {
-  position: relative;
-  display: flex !important;
-  flex-direction: column;
-  align-items: flex-start !important;
-  text-align: left !important;
-  gap: 0.25rem;
-  padding: 1.6rem 4.5rem 1.6rem 1.75rem !important;
-  background: var(--blanco) !important;
-  border: none !important;
-  border-radius: var(--radio) !important;
-  box-shadow: var(--sombra) !important;
-  transform: none !important;
-  font-family: inherit;
-  cursor: pointer;
-}
-.cta-stage-button:hover { box-shadow: var(--sombra-hover) !important; }
-.cta-stage-button::after {
+/* ---------- Recursos (ruta por etapas del ciclo de vida) ---------- */
+.stage-track { list-style: none; margin: 2.5rem 0 0; padding: 0; }
+.stage-step { position: relative; padding: 0 0 2.75rem 3.5rem; }
+.stage-step:last-child { padding-bottom: 0; }
+.stage-step::before {
   content: '';
   position: absolute;
-  right: 1.6rem;
-  top: 50%;
-  width: 34px;
-  height: 34px;
-  transform: translateY(-50%);
-  background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2315171c' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 3h8l4 4v14H6z'/%3E%3Cpath d='M14 3v4h4M9 12h6M9 15.5h6M9 9h2'/%3E%3C/svg%3E");
+  left: 0.95rem;
+  top: 2.3rem;
+  bottom: 0.1rem;
+  width: 1px;
+  background: var(--linea);
 }
-.cta-stage-button .stage-title,
-.cta-stage-button .stage-desc,
-.cta-stage-button span { color: var(--tinta) !important; text-shadow: none !important; }
-.cta-stage-button .stage-title { font-size: 0.85rem; font-weight: 400; color: var(--suave) !important; }
-.cta-stage-button .stage-desc { font-size: 1.2rem; font-weight: 450; letter-spacing: -0.015em; opacity: 1; }
+.stage-step:last-child::before { display: none; }
+.stage-marker { position: relative; display: flex; align-items: baseline; gap: 0.85rem; margin-bottom: 1.1rem; }
+.stage-marker span {
+  position: absolute;
+  left: -3.5rem;
+  top: 0.1rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--tinta);
+  color: var(--blanco);
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stage-marker em {
+  font-style: italic;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.55rem;
+  color: var(--tinta);
+}
+.stage-chapters { display: flex; flex-direction: column; }
+.chapter-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 1rem 0.35rem;
+  border-bottom: 1px solid var(--linea);
+  text-decoration: none;
+  transition: padding-left 0.15s ease, border-color 0.15s ease;
+}
+.stage-chapters a:last-child { border-bottom: none; }
+.chapter-row:hover { padding-left: 0.75rem; border-color: var(--azul); }
+.chapter-num {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--suave);
+  min-width: 2.2ch;
+}
+.chapter-name { font-size: 1.06rem; color: var(--tinta); font-weight: 450; letter-spacing: -0.005em; }
+.chapter-row:hover .chapter-name { color: var(--azul); }
 
 /* ---------- Contacto ---------- */
 .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2rem; }
@@ -609,9 +630,13 @@ footer p { margin: 0; font-size: 0.85rem; color: var(--suave); }
   .experience-head { flex-direction: column; gap: 0.6rem; }
   .experience-body { grid-template-columns: 1fr; }
   .portrait-figure { max-width: 260px; }
-  .photo-grid, .photo-grid-2, .dash-grid, .edu-grid, .cta-grid, .contact-grid { grid-template-columns: 1fr; }
+  .photo-grid, .photo-grid-2, .dash-grid, .edu-grid, .contact-grid { grid-template-columns: 1fr; }
   .section-head { margin: 3.5rem auto 1.5rem; }
   footer { flex-direction: column; }
+  .stage-step { padding-left: 2.5rem; }
+  .stage-marker span { left: -2.5rem; width: 1.6rem; height: 1.6rem; font-size: 0.72rem; }
+  .stage-step::before { left: 0.75rem; }
+  .chapter-row { gap: 0.85rem; }
 }
 @media (max-width: 420px) {
   .stats { gap: 1.5rem; }
